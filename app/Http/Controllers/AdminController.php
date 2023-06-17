@@ -21,6 +21,6 @@ class AdminController extends Controller
     public function dashboard ()
     {
         // echo 'test';
-        return view('admin.dashboard');
+        return view('admin.admin_dashboard');
     }
 }
