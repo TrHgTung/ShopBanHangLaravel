@@ -57,7 +57,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="{{asset('public/backend/images/2.png')}}">
-                <span class="username">John Doe</span>
+                <span class="username"> 
+                <?php
+                    $name = Session::get('admin_name');
+                    if($name){
+                        echo $name;
+                        // Session::put('message', null);
+                    }
+                ?>
+                </span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">

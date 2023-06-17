@@ -50,6 +50,8 @@ class AdminController extends Controller
     public function logout ()
     {
         // echo 'oke';
-
+        Session::put('admin_name',null);
+        Session::put('admin_id',null);
+        return view('admin.auth.admin_login');
     }
 }
