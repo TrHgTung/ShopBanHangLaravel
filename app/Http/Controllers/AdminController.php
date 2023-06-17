@@ -12,9 +12,15 @@ class AdminController extends Controller
         return view('admin.auth.admin_login');
     }
 
-    public function index ()
+    // public function index ()
+    // {
+    //     // echo 'test';
+    //     return view('admin.admin_layout');
+    // }
+
+    public function dashboard ()
     {
         // echo 'test';
-        return view('admin.admin_layout');
+        return view('admin.dashboard');
     }
 }

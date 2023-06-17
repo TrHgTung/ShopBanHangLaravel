@@ -112,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <section id="main-content">
 	<section class="wrapper">
 		<!-- //market-->
-	@yield('admin_content')	
+	@yield('admin_content')
 </section>
  <!-- footer -->
 		

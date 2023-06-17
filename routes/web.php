@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,6 @@ use App\Http\Controllers\AdminController;
 
 
 Route::get('/', [HomeController::class, 'index']); 
-Route::get('/trang-chu', [HomeController::class,'index']); 
 Route::get('/admin_login', [AdminController::class,'login']); 
-Route::get('/admin', [AdminController::class,'index']); 
-
+Route::get('/admin', [AdminController::class,'dashboard']); 
+// Route::get('/dashboard', [AdminController::class,'index']); 
