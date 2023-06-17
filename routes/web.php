@@ -16,7 +16,9 @@ use App\Http\Controllers\Controller;
 */
 
 
-Route::get('/', [HomeController::class, 'index']); 
-Route::get('/admin_login', [AdminController::class,'login']); 
-Route::get('/admin', [AdminController::class,'dashboard']); 
+Route::get('/', [HomeController::class, 'index']);  // trang index
+Route::get('/admin_login', [AdminController::class,'login']); // trang login cho admin
+Route::get('/admin', [AdminController::class,'show_dashboard']); // trang index admin
+Route::post('/admin-dashboard', [AdminController::class,'dashboard']); // trang index admin (yeu cau login truoc)
+Route::get('/logout', [AdminController::class,'logout']); // logout admin
 // Route::get('/dashboard', [AdminController::class,'index']); 
