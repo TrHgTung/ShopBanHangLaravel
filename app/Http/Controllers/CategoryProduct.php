@@ -74,8 +74,10 @@ class CategoryProduct extends Controller
         return Redirect::to('all-category-product');
     }
 
-    public function delete_category_product ()
+    public function delete_category_product ( $category_product_id)
     {
-        return ;
+        DB::table('tbl_category_product')->where('category_id', $category_product_id)->delete();
+        Session::put('message','Đã xóa sản phẩm thành công');
+        return Redirect::to('all-category-product');
     }
 }
