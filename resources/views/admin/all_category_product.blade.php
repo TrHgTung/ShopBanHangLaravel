@@ -28,6 +28,13 @@
       </div>
     </div>
     <div class="table-responsive">
+    <?php
+		$message = Session::get('message');
+		if($message){
+			echo $message;
+			Session::put('message', null);
+		}
+	?>
       <table class="table table-striped b-t b-light">
         <thead>
           <tr>
@@ -37,22 +44,30 @@
               </label>
             </th>
             <th>Tên danh mục</th>
-            <th>Hiển thị</th>
-            <th>Ngày thêm</th>
+            <th>Trạng thái</th>
             <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
+            @foreach($all_category_product as $key => $cate_pro)
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-            <td>Danh mục test</td>
-            <td><span class="text-ellipsis">Hiện</span></td>
-            <td><span class="text-ellipsis">20.6.2023</span></td>
+            <td>{{ $cate_pro->category_name }}</td>
+            <td><span class="text-ellipsis">
+                <?php
+                    if($cate_pro->category_status == 0){
+                        echo 'Đang Ẩn';
+                    } else{
+                        echo 'Đang Hiển Thị';
+                    }
+                    
+                ?>
+            </span></td>
             <td>
               <a href="" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
             </td>
           </tr>
-          
+          @endforeach
         </tbody>
       </table>
     </div>
