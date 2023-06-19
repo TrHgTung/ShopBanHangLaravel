@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryProduct;
 use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,6 @@ Route::get('/admin_login', [AdminController::class,'login']); // trang login cho
 Route::get('/admin', [AdminController::class,'show_dashboard']); // trang index admin
 Route::post('/admin-dashboard', [AdminController::class,'dashboard']); // trang index admin (yeu cau login truoc)
 Route::get('/logout', [AdminController::class,'logout']); // logout admin
-// Route::get('/dashboard', [AdminController::class,'index']); 
+
+Route::get('/add-category-product', [CategoryProduct::class, 'add_category_product']);  // them danh muc san pham
+Route::get('/all-category-product', [CategoryProduct::class, 'all_category_product']);  // xem danh muc san pham

@@ -97,11 +97,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
-                        <span>Products Management</span>
+                        <span>Category Management</span>
                     </a>
                     <ul class="sub">
-						<li><a href="typography.html">Add Products</a></li>
-						<li><a href="glyphicon.html">View Products</a></li>
+						<li><a href="{{URL::to('/add-category-product')}}">Add Product Category</a></li>
+						<li><a href="{{URL::to('/all-category-product')}}">View Product Category</a></li>
                         <!-- <li><a href="grids.html">Promotions</a></li> -->
                     </ul>
                 </li>
