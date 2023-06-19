@@ -56,11 +56,15 @@
             <td><span class="text-ellipsis">
                 <?php
                     if($cate_pro->category_status == 0){
-                        echo 'Đang Ẩn';
+                ?>
+                    Đang Ẩn. <a href="{{URL::to('/inactive-category-product/'.$cate_pro->category_id)}}">Hiển thị?</a>
+                <?php
                     } else{
-                        echo 'Đang Hiển Thị';
-                    }
+                ?>
                     
+                    Đang Hiển Thị. <a href="{{URL::to('/active-category-product/'.$cate_pro->category_id)}}">Ẩn?</a>
+                <?php 
+                    } 
                 ?>
             </span></td>
             <td>

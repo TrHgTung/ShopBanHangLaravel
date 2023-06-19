@@ -26,4 +26,6 @@ Route::get('/logout', [AdminController::class,'logout']); // logout admin
 
 Route::get('/add-category-product', [CategoryProduct::class, 'add_category_product']);  // them danh muc san pham
 Route::get('/all-category-product', [CategoryProduct::class, 'all_category_product']);  // xem danh muc san pham
+Route::get('/inactive-category-product/{category_product_id}', [CategoryProduct::class, 'inactive_category_product']);  // an danh muc
+Route::get('/active-category-product/{category_product_id}', [CategoryProduct::class, 'active_category_product']);  // hien thi danh muc
 Route::post('/save-category-product', [CategoryProduct::class, 'save_category_product']);  // luu danh muc san pham

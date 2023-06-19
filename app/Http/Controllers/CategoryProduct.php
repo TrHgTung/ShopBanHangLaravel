@@ -42,4 +42,17 @@ class CategoryProduct extends Controller
         return Redirect::to('all-category-product');
     }
 
+    public function inactive_category_product ($category_product_id)
+    {
+        DB::table('tbl_category_product')->where('category_id', $category_product_id)->update(['category_status'=>1]);
+        Session::put('message','Danh mục sản phẩm đã hiển thị');
+        return Redirect::to('all-category-product');
+    }
+
+    public function active_category_product ($category_product_id)
+    {
+        DB::table('tbl_category_product')->where('category_id',$category_product_id)->update(['category_status'=>0]);
+        Session::put('message','Danh mục sản phẩm đã ẩn');
+        return Redirect::to('all-category-product');
+    }
 }
