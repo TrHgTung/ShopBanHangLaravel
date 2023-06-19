@@ -55,4 +55,27 @@ class CategoryProduct extends Controller
         Session::put('message','Danh mục sản phẩm đã ẩn');
         return Redirect::to('all-category-product');
     }
+
+    public function edit_category_product ($category_product_id)
+    {
+        $edit_category_product = DB::table('tbl_category_product')->where('category_id', $category_product_id)->get();
+        $manager_category_product = view('admin.edit_category_product')->with('edit_category_product', $edit_category_product);
+        return view('admin_layout')->with('admin.edit_category_product', $manager_category_product);
+    }
+
+    public function update_category_product (Request $request, $category_product_id)
+    {
+        $data = array();
+        $data['category_name'] = $request->category_product_name;
+        $data['category_desc'] = $request->category_product_desc;
+
+        DB::table('tbl_category_product')->where('category_id', $category_product_id)->update($data);
+        Session::put('message','Danh mục sản phẩm đã cập nhật thành công');
+        return Redirect::to('all-category-product');
+    }
+
+    public function delete_category_product ()
+    {
+        return ;
+    }
 }
