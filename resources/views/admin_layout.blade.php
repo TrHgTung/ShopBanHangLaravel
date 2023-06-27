@@ -97,11 +97,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
-                        <span>Category Management</span>
+                        <span>Quản lý danh mục sản phẩm</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/add-category-product')}}">Add Product Category</a></li>
-						<li><a href="{{URL::to('/all-category-product')}}">View Product Category</a></li>
+						<li><a href="{{URL::to('/add-category-product')}}">Thêm danh mục mới</a></li>
+						<li><a href="{{URL::to('/all-category-product')}}">Xem danh mục hiện có</a></li>
+                        <!-- <li><a href="grids.html">Promotions</a></li> -->
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Quản lý nhãn hàng/thương hiệu</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/add-brand-product')}}">Thêm mới</a></li>
+						<li><a href="{{URL::to('/all-brand-product')}}">Xem tất cả hiện có</a></li>
                         <!-- <li><a href="grids.html">Promotions</a></li> -->
                     </ul>
                 </li>
