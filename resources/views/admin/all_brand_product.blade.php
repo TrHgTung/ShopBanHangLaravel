@@ -49,27 +49,27 @@
           </tr>
         </thead>
         <tbody>
-            @foreach($all_brand_product as $key => $cate_pro)
+            @foreach($all_brand_product as $key => $brand_pro)
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-            <td>{{ $cate_pro->brand_name }}</td>
+            <td>{{ $brand_pro->brand_name }}</td>
             <td><span class="text-ellipsis">
                 <?php
-                    if($cate_pro->brand_status == 0){
+                    if($brand_pro->brand_status == 0){
                 ?>
-                    Đang Ẩn. <a href="{{URL::to('/inactive-brand-product/'.$cate_pro->brand_id)}}">Hiển thị?</a>
+                    Đang Ẩn. <a href="{{URL::to('/inactive-brand-product/'.$brand_pro->brand_id)}}">Hiển thị?</a>
                 <?php
                     } else{
                 ?>
                     
-                    Đang Hiển Thị. <a href="{{URL::to('/active-brand-product/'.$cate_pro->brand_id)}}">Ẩn?</a>
+                    Đang Hiển Thị. <a href="{{URL::to('/active-brand-product/'.$brand_pro->brand_id)}}">Ẩn?</a>
                 <?php 
                     } 
                 ?>
             </span></td>
             <td>
-              <a href="{{URL::to('/edit-brand-product/'.$cate_pro->brand_id)}}" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
-              <a onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')" href="{{URL::to('/delete-brand-product/'.$cate_pro->brand_id)}}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+              <a href="{{URL::to('/edit-brand-product/'.$brand_pro->brand_id)}}" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
+              <a onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')" href="{{URL::to('/delete-brand-product/'.$brand_pro->brand_id)}}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
             </td>
           </tr>
           @endforeach
