@@ -21,7 +21,11 @@ class ProductController extends Controller
 
     public function all_product()
     {
-        $all_product = DB::table('tbl_product')->get();
+        // $all_product = DB::table('tbl_product')->orderby('product_id','desc')->get();
+        $all_product = DB::table('tbl_product')
+        ->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')
+        ->join('tbl_brand_product','tbl_brand_product.brand_id','=','tbl_product.brand_id')->orderby('tbl_product.product_id','desc')->get();
+
         $manager_product = view('admin.all_product')->with('all_product', $all_product);
         return view('admin_layout')->with('admin.all_product', $manager_product);
     }
@@ -80,8 +84,11 @@ class ProductController extends Controller
         return Redirect::to('all-product');
     }
 
-    public function edit_product ($brand_id)
+    public function edit_product ($product_id)
     {
+        // $cate_product = DB::table('tbl_category_product')->orderby('category_id','desc')->get();
+        // $brand_product = DB::table('tbl_brand_product')->orderby('brand_id','desc')->get();
+
         $edit_product = DB::table('tbl_product')->where('product_id', $product_id)->get();
         $manager_product = view('admin.edit_product')->with('edit_product', $edit_product);
         return view('admin_layout')->with('admin.edit_product', $manager_product);
