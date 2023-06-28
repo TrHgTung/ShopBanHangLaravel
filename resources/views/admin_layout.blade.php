@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <head>
-<title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Phân vùng quản trị</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -113,6 +113,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
 						<li><a href="{{URL::to('/add-brand-product')}}">Thêm mới</a></li>
 						<li><a href="{{URL::to('/all-brand-product')}}">Xem tất cả hiện có</a></li>
+                        <!-- <li><a href="grids.html">Promotions</a></li> -->
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Quản lý sản phẩm</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/add-product')}}">Thêm sản phẩm mới</a></li>
+						<li><a href="{{URL::to('/all-product')}}">Xem tất cả</a></li>
                         <!-- <li><a href="grids.html">Promotions</a></li> -->
                     </ul>
                 </li>

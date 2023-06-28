@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryProduct;
 use App\Http\Controllers\BrandProduct;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
@@ -46,11 +47,11 @@ Route::post('/save-brand-product', [BrandProduct::class, 'save_brand_product']);
 Route::post('/update-brand-product/{brand_product_id}', [BrandProduct::class, 'update_brand_product']);  // cap nhat (phia xu li) danh muc san pham
 
 // Product
-Route::get('/add-product', [Product::class, 'add_product']);  // them danh muc san pham
-Route::get('/edit-product/{product_id}', [Product::class, 'edit_product']);  // sửa danh muc san pham
-Route::get('/delete-product/{product_id}', [Product::class, 'delete_product']);  // xoa danh muc san pham
-Route::get('/all-product', [Product::class, 'all_product']);  // xem danh muc san pham
-Route::get('/inactive-product/{product_id}', [Product::class, 'inactive_product']);  // an danh muc
-Route::get('/active-product/{product_id}', [Product::class, 'active_product']);  // hien thi danh muc
-Route::post('/save-product', [Product::class, 'save_product']);  // luu danh muc san pham
-Route::post('/update-product/{product_id}', [Product::class, 'update_product']);  // cap nhat (phia xu li) danh muc san pham
+Route::get('/add-product', [ProductController::class, 'add_product']);  // them danh muc san pham
+Route::get('/edit-product/{product_id}', [ProductController::class, 'edit_product']);  // sửa danh muc san pham
+Route::get('/delete-product/{product_id}', [ProductController::class, 'delete_product']);  // xoa danh muc san pham
+Route::get('/all-product', [ProductController::class, 'all_product']);  // xem danh muc san pham
+Route::get('/inactive-product/{product_id}', [ProductController::class, 'inactive_product']);  // an danh muc
+Route::get('/active-product/{product_id}', [ProductController::class, 'active_product']);  // hien thi danh muc
+Route::post('/save-product', [ProductController::class, 'save_product']);  // luu danh muc san pham
+Route::post('/update-product/{product_id}', [ProductController::class, 'update_product']);  // cap nhat (phia xu li) danh muc san pham

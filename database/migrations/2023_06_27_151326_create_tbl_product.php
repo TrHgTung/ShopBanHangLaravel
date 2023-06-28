@@ -13,9 +13,13 @@ return new class extends Migration
     {
         Schema::create('tbl_product', function (Blueprint $table) {
             $table->Increments('product_id');
-            $table->string('category_name');
-            $table->text('category_desc');
-            $table->integer('category_status');
+            $table->integer('category_id');
+            $table->integer('brand_id');
+            $table->text('product_desc');
+            $table->text('product_content');
+            $table->string('product_price');
+            $table->string('product_image');
+            $table->integer('product_status');
             $table->timestamps();
         });
     }
