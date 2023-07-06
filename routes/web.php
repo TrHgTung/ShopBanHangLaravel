@@ -26,7 +26,7 @@ Route::get('/admin', [AdminController::class,'show_dashboard']); // trang index 
 Route::post('/admin-dashboard', [AdminController::class,'dashboard']); // trang index admin (yeu cau login truoc)
 Route::get('/logout', [AdminController::class,'logout']); // logout admin
 
-// CategoryProduct
+// CategoryProduct (Quan ly danh muc)
 Route::get('/add-category-product', [CategoryProduct::class, 'add_category_product']);  // them danh muc san pham
 Route::get('/edit-category-product/{category_product_id}', [CategoryProduct::class, 'edit_category_product']);  // sửa danh muc san pham
 Route::get('/delete-category-product/{category_product_id}', [CategoryProduct::class, 'delete_category_product']);  // xoa danh muc san pham
@@ -36,7 +36,7 @@ Route::get('/active-category-product/{category_product_id}', [CategoryProduct::c
 Route::post('/save-category-product', [CategoryProduct::class, 'save_category_product']);  // luu danh muc san pham
 Route::post('/update-category-product/{category_product_id}', [CategoryProduct::class, 'update_category_product']);  // cap nhat (phia xu li) danh muc san pham
 
-// BrandProduct
+// BrandProduct (quan ly thuong hieu)
 Route::get('/add-brand-product', [BrandProduct::class, 'add_brand_product']);  // them danh muc san pham
 Route::get('/edit-brand-product/{brand_product_id}', [BrandProduct::class, 'edit_brand_product']);  // sửa danh muc san pham
 Route::get('/delete-brand-product/{brand_product_id}', [BrandProduct::class, 'delete_brand_product']);  // xoa danh muc san pham
@@ -46,7 +46,7 @@ Route::get('/active-brand-product/{brand_product_id}', [BrandProduct::class, 'ac
 Route::post('/save-brand-product', [BrandProduct::class, 'save_brand_product']);  // luu danh muc san pham
 Route::post('/update-brand-product/{brand_product_id}', [BrandProduct::class, 'update_brand_product']);  // cap nhat (phia xu li) danh muc san pham
 
-// Product
+// Product (quan ly san pham)
 Route::get('/add-product', [ProductController::class, 'add_product']);  // them danh muc san pham
 Route::get('/edit-product/{product_id}', [ProductController::class, 'edit_product']);  // sửa danh muc san pham
 Route::get('/delete-product/{product_id}', [ProductController::class, 'delete_product']);  // xoa danh muc san pham

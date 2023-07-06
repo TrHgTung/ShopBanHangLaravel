@@ -47,7 +47,7 @@
             <th>Giá bán</th>
             <th>Hình ảnh sản phẩm</th>
             <th>Danh mục sản phẩm</th>
-            <th>Thuonwg hiệu sản phẩm</th>
+            <th>Thương hiệu sản phẩm</th>
             <th>Trạng thái</th>
             <th style="width:30px;"></th>
           </tr>
@@ -78,7 +78,7 @@
             </span></td>
             <td>
               <a href="{{URL::to('/edit-product/'.$pro->product_id)}}" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
-              <a onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')" href="{{URL::to('/delete-brand-product/'.$pro->product_id)}}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+              <a onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?')" href="{{URL::to('/delete-product/'.$pro->product_id)}}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
             </td>
           </tr>
           @endforeach
