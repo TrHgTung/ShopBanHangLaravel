@@ -11,8 +11,22 @@ use Illuminate\Support\Facades\Redirect;
 session_start();
 class ProductController extends Controller
 {
+    public function AuthLogin(){
+        $admin_id = Session::get('admin_id');
+        if($admin_id){ // neu có admin login vào
+            return Redirect::to('/admin-dashboard');
+            // return view('admin.admin_dashboard');
+        }
+        else{
+            // return Redirect::to('admin')->send();
+            return Redirect::to('/admin-login')->send();
+            // return view('admin.auth.admin_login');
+        }
+    }
+
     public function add_product()
     {
+        $this->AuthLogin();
         $cate_product = DB::table('tbl_category_product')->orderby('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand_product')->orderby('brand_id','desc')->get();
        
@@ -21,6 +35,7 @@ class ProductController extends Controller
 
     public function all_product()
     {
+        $this->AuthLogin();
         // $all_product = DB::table('tbl_product')->orderby('product_id','desc')->get();
         $all_product = DB::table('tbl_product')
         ->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')
@@ -32,6 +47,7 @@ class ProductController extends Controller
 
     public function save_product(Request $request)
     {
+        $this->AuthLogin();
         // return view('admin.save_brand_product');
         $data = array();
         $data['product_name'] = $request->product_name;
@@ -72,6 +88,7 @@ class ProductController extends Controller
 
     public function inactive_product ($product_id)
     {
+        $this->AuthLogin();
         DB::table('tbl_product')->where('product_id', $product_id)->update(['status'=>1]);
         Session::put('message','Sản phẩm đã hiển thị');
         return Redirect::to('all-product');
@@ -79,6 +96,7 @@ class ProductController extends Controller
 
     public function active_product ($product_id)
     {
+        $this->AuthLogin();
         DB::table('tbl_product')->where('product_id',$product_id)->update(['status'=>0]);
         Session::put('message','Sản phẩm đã ẩn');
         return Redirect::to('all-product');
@@ -86,6 +104,8 @@ class ProductController extends Controller
 
     public function edit_product ($product_id)
     {
+        $this->AuthLogin();
+
         $cate_product = DB::table('tbl_category_product')->orderby('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand_product')->orderby('brand_id','desc')->get();
 
@@ -96,6 +116,8 @@ class ProductController extends Controller
 
     public function update_product (Request $request, $product_id)
     {
+        $this->AuthLogin();
+
         $data = array();
         // $data['product_name'] = $request->product_name;
         // $data['product_desc'] = $request->product_desc;
@@ -138,6 +160,8 @@ class ProductController extends Controller
 
     public function delete_product ($product_id)
     {
+        $this->AuthLogin();
+        
         DB::table('tbl_product')->where('product_id', $product_id)->delete();
         Session::put('message','Đã xóa sản phẩm!');
         return Redirect::to('all-product');

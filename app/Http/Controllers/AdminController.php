@@ -14,12 +14,12 @@ class AdminController extends Controller
     public function AuthLogin(){
         $admin_id = Session::get('admin_id');
         if($admin_id){ // neu có admin login vào
-            // return Redirect::to('dashboard');
-            return view('admin.admin_dashboard');
+            return Redirect::to('/admin-dashboard');
+            // return view('admin.admin_dashboard');
         }
         else{
             // return Redirect::to('admin')->send();
-            return Redirect::to('/admin_login')->send();
+            return Redirect::to('/admin-login')->send();
             // return view('admin.auth.admin_login');
         }
     }
@@ -55,7 +55,7 @@ class AdminController extends Controller
         else{
             Session::put('message','Vui lòng đăng nhập lại. Lỗi sai thông tin đăng nhập');
             // return view('admin.auth.admin_login');
-            return Redirect::to('/admin_login');
+            return Redirect::to('/admin-login');
         }
         
     }
@@ -63,6 +63,7 @@ class AdminController extends Controller
     public function logout ()
     {
         // echo 'oke';
+        $this->AuthLogin();
         Session::put('admin_name',null);
         Session::put('admin_id',null);
         return view('admin.auth.admin_login');
