@@ -19,7 +19,7 @@ use App\Http\Controllers\Controller;
 */
 
 
-Route::get('/', [HomeController::class, 'home']);  // trang index
+Route::get('/', [HomeController::class, 'index']);  // trang index
 Route::get('/trang-chu', [HomeController::class, 'index']);  // trang index
 Route::get('/admin-login', [AdminController::class,'login']); // trang login cho admin
 Route::get('/admin', [AdminController::class,'show_dashboard']); // trang index admin
