@@ -210,22 +210,22 @@
 					<div class="left-sidebar">
 						<h2>Danh mục sản phẩm</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Kids</a></h4>
+							@foreach($category as $key => $cate)
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title"><a href="#">Kids</a></h4>
+									</div>
 								</div>
-							</div>
-							
+							@endforeach
 						</div><!--/category-products-->
 					
 						<div class="brands_products"><!--brands_products-->
 							<h2>Thương hiệu</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
-									
-									<li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-								
+									@foreach($brand as $key => $brand)
+										<li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+									@endforeach
 								</ul>
 							</div>
 						</div><!--/brands_products-->
