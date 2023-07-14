@@ -55,3 +55,7 @@ Route::get('/inactive-product/{product_id}', [ProductController::class, 'inactiv
 Route::get('/active-product/{product_id}', [ProductController::class, 'active_product']);  // hien thi danh muc
 Route::post('/save-product', [ProductController::class, 'save_product']);  // luu danh muc san pham
 Route::post('/update-product/{product_id}', [ProductController::class, 'update_product']);  // cap nhat (phia xu li) danh muc san pham
+
+// danh mục sản phẩm
+Route::get('/danh-muc-san-pham/{category_id}', [CategoryProduct::class, 'show_category_home']);  // trang danh mục sp theo id sphẩm
+Route::get('/thuong-hieu-san-pham/{brand_id}', [BrandProduct::class, 'show_brand_home']);  // trang danh mục sp theo id sphẩm
