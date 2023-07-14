@@ -213,22 +213,36 @@
 							@foreach($category as $key => $cate)
 								<div class="panel panel-default">
 									<div class="panel-heading">
-										<h4 class="panel-title"><a href="#">Kids</a></h4>
+										<h4 class="panel-title"><a href="{{URL::to('/danh-muc-san-pham/'.$cate->category_id)}}">{{$cate->category_name}}</a></h4>
 									</div>
 								</div>
 							@endforeach
 						</div><!--/category-products-->
 					
-						<div class="brands_products"><!--brands_products-->
+						<!-- <div class="brand_product">
 							<h2>Thương hiệu</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 									@foreach($brand as $key => $brand)
-										<li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title"><a href="#">brand</a></h4>
+											</div>
+										</div>
 									@endforeach
 								</ul>
 							</div>
-						</div><!--/brands_products-->
+						</div> -->
+						<h2>Thương hiệu</h2>
+						<div class="panel-group category-products" id="accordian">
+							@foreach($brand as $key => $br)
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title"><a href="{{URL::to('/thuong-hieu-san-pham/'.$brand->brand_id)}}">{{$brand->brand_name}}</a></h4>
+									</div>
+								</div>
+							@endforeach
+						</div>
 						
 					</div>
 				</div>
@@ -298,11 +312,13 @@
 						<div class="single-widget">
 							<h2>Service</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Online Help</a></li>
+								
+						
 								<li><a href="#">Contact Us</a></li>
 								<li><a href="#">Order Status</a></li>
 								<li><a href="#">Change Location</a></li>
 								<li><a href="#">FAQ’s</a></li>
+	
 							</ul>
 						</div>
 					</div>
