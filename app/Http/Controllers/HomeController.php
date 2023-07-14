@@ -18,7 +18,7 @@ class HomeController extends Controller
 
         $all_product = DB::table('tbl_product')->where('product_status','1')->orderby('product_id','desc')->limit(4)->get();
 
-        return view('pages.home')->with('category' , $cate_product)->with('brand' , $brand_product)->with('all_product', $all_product);
+        return view('pages.home')->with('category_product' , $cate_product)->with('brand_product' , $brand_product)->with('all_product', $all_product);
         
         // return view('pages.home');
 
