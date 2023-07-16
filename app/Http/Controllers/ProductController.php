@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 use Session;
+use App\Slider;
 use Illuminate\Support\Facades\Redirect;
 
 session_start();
@@ -172,7 +173,10 @@ class ProductController extends Controller
     public function details_product($product_id){
         $cate_product = DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand_product')->where('brand_status','1')->orderby('brand_id','desc')->get();
+        $details_product = DB::table('tbl_product')->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')->join('tbl_brand_product','tbl_brand_product.brand_id','=','tbl_product.brand_id')->where('tbl_product.product_id', $product_id)->limit(1)->get();
 
-        return view('pages.sanpham.show_details')->with('category_product' , $cate_product)->with('brand_product' , $brand_product);
+        return view('pages.sanpham.show_details')->with('category_product' , $cate_product)->with('brand_product' , $brand_product)->with('detail_product' , $details_product);
+        // return view('pages.sanpham.show_details')->with('category_product' , $cate_product)->with('brand_product' , $brand_product);
+        // return view('pages.sanpham.show_details',compact('cate_product','brand_product','detail_product'));
     }
 }
