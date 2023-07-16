@@ -166,4 +166,13 @@ class ProductController extends Controller
         Session::put('message','Đã xóa sản phẩm!');
         return Redirect::to('all-product');
     }
+    // end of admin site
+    // ------------
+    // user
+    public function details_product($product_id){
+        $cate_product = DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
+        $brand_product = DB::table('tbl_brand_product')->where('brand_status','1')->orderby('brand_id','desc')->get();
+
+        return view('pages.sanpham.show_details')->with('category_product' , $cate_product)->with('brand_product' , $brand_product);
+    }
 }

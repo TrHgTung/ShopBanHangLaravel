@@ -8,6 +8,7 @@
     @endforeach
 
 	@foreach($category_by_id as $key => $cbid)
+	<a href="{{URL::to('/chi-tiet-san-pham/'.$cbid->product_id)}}">
 		<div class="col-sm-4">
 			<div class="product-image-wrapper">
 				<div class="single-products">
@@ -32,6 +33,7 @@
 				</div>
 	    	</div>
 		</div>
+</a>
 	@endforeach
 						
 </div><!--features_items-->
