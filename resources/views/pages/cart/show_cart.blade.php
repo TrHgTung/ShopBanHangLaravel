@@ -50,7 +50,6 @@
                                     </div>
                                 </td>
                                 <td class="cart_total">
-                                    <!-- <p class="cart_total_price">{{Cart::subtotal()}} VND</p> -->
                                     <p class="cart_total_price">{{number_format($v_content->price * $v_content->qty)}} VND</p>
                                 </td>
                                 <td class="cart_delete">

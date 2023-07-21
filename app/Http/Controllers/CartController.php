@@ -20,7 +20,7 @@ class CartController extends Controller
         $quantity = $request->qty;
 
         $product_info = DB::table('tbl_product')->where('product_id', $productId)->first();
-        // Cart::add('293ad', 'Product1' , 1, 9.99);
+        // Cart::add('293ad', 'Product1' , 1, 9.99); // sample
         $data['id'] = $product_info->product_id;
         $data['qty'] = $quantity;
         $data['name'] = $product_info->product_name;
