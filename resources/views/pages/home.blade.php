@@ -4,10 +4,12 @@
 <div class="features_items">
 	<h2 class="title text-center">Về chúng tôi</h2>
 	<p>Images carousel > about us > slider (about / store / history / which sell for ...)</p>
-	<!-- @foreach($all_product as $key => $product)
+	<!-- !!! -->
+	<h2 class="title text-center">Sản phẩm mới</h2>
+	@foreach($all_product as $key => $product)
 		<div class="col-sm-4">
 			<div class="product-image-wrapper">
-				<a href="">
+				<a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}">
 					<div class="single-products">
 						<div class="productinfo text-center">
 							<img src="{{URL::to('public/upload/product/'.$product->product_image)}}" alt="" />
@@ -31,7 +33,7 @@
 				</div>
 	    	</div>
 		</div>
-	@endforeach -->
+	@endforeach
 						
 </div>
 

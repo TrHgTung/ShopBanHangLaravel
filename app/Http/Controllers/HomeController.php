@@ -11,8 +11,15 @@ session_start();
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+         // SEO
+         $meta_desc = "Chuyên bán những phụ kiện ,thiết bị game"; 
+         $meta_keywords = "thiet bi game,phu kien game,game phu kien,game giai tri";
+         $meta_title = "Phụ kiện,máy chơi game chính hãng";
+         $url_canonical = $request->url();
+         // end SEO
+
         $cate_product = DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand_product')->where('brand_status','1')->orderby('brand_id','desc')->get();
 

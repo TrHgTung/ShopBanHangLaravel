@@ -64,3 +64,4 @@ Route::get('/chi-tiet-san-pham/{product_id}', [ProductController::class, 'detail
 // Cart gio hangf
 
 Route::post('/save-cart', [CartController::class, 'save_cart']);
+Route::get('/show-cart', [CartController::class, 'show_cart']);
