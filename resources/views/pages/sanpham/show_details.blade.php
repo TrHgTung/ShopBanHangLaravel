@@ -24,21 +24,24 @@
 							<div class="product-information"><!--/product-information-->
 								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
 								<h2>{{$value->product_name}}</h2>
+								<p><strong>{{$value->category_name}}</strong></p>
 								<p>Mã sản phẩm: {{$value->product_id}}</p>
 								<img src="images/product-details/rating.png" alt="" />
 								<span>
-									<span>Giá: {{number_format($value->product_price)}} VND</span>
-									<label>Số lượng có sẵn: {{$value->product_quantity}}</label>
-									<span>Mô tả ngắn gọn: {{$value->product_desc}}</span>
-									<input type="text" value="3" />
-									<button type="button" class="btn btn-fefault cart">
-										<i class="fa fa-shopping-cart"></i>
-										Add to cart
-									</button>
+									<form action="{{URL::to('/save-cart')}}" method="post">
+										{{ csrf_field() }}
+										<span>{{number_format($value->product_price)}} VND</span>
+										x  <input name="qty" type="number" min="1" value="1" />
+										<input name="productid_hidden" type="hidden"  value="{{$value->product_id}}" />
+										<button type="submit" class="btn btn-fefault cart">
+											<i class="fa fa-shopping-cart"></i>
+											Thêm vào giỏ
+										</button>
+									</form>
 								</span>
-								<p><b>Availability:</b> In Stock</p>
-								<p><b>Condition:</b> New</p>
-								<p><b>Brand</b> (brand_id): {{$value->brand_id}}</p>
+								<p><b>Mô tả ngắn gọn:</b> {{$value->product_desc}}</p>
+								<p><b>Tình trạng:</b> Mới / Còn hàng</p>
+								<p><b>Đơn vị cung cấp</b>: {{$value->brand_name}}</p>
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
 						</div>
@@ -54,12 +57,13 @@
 						</div>
 						<div class="tab-content">
 							<div class="tab-pane fade" id="details" >
-                                <p>{{$value->product_content}}</p>
+								<p><strong>Về <i>{{$value->product_name}}</i></strong></p>
+                                <p>{!!$value->product_content!!}</p>
 							</div>
 							<div class="tab-pane fade active in" id="reviews" >
 								<div class="col-sm-12">
                                 <ul>
-									<li>LẦN CUỐI CẬP NHẬT:</a></li>
+									<li><strong>LẦN CUỐI CẬP NHẬT: </strong></a></li>
 									<li class=""><a href="#" id="hienthithoigian"><i class="fa fa-clock-o"></i>12:41 PM</a></li>
 									<!-- <li><a href="#"><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li> -->
 								</ul>
@@ -111,19 +115,23 @@
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
-								<div class="item active">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
+								<div class="item active">
+									@foreach($relate as $key=>$lienquan)
+										<div class="col-sm-4">
+											<div class="product-image-wrapper">
+												<a href="{{URL::to('/chi-tiet-san-pham/'.$lienquan->product_id)}}">
+													<div class="single-products">
+														<div class="productinfo text-center">
+															<img src="{{URL::to('public/upload/product/'.$lienquan->product_image)}}" alt="" />
+															<h2>{{number_format($lienquan->product_price)}} VND</h2>
+															<p><strong>{{$lienquan->product_name}}</strong></p>
+															<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem ngay</button>
+														</div>
+													</div>
+												</a>
 											</div>
 										</div>
-									</div>
+									@endforeach
 									
 								</div>
 							</div>

@@ -10,6 +10,7 @@ use App\Slider;
 use Illuminate\Support\Facades\Redirect;
 
 session_start();
+
 class ProductController extends Controller
 {
     public function AuthLogin(){
@@ -175,7 +176,13 @@ class ProductController extends Controller
         $brand_product = DB::table('tbl_brand_product')->where('brand_status','1')->orderby('brand_id','desc')->get();
         $details_product = DB::table('tbl_product')->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')->join('tbl_brand_product','tbl_brand_product.brand_id','=','tbl_product.brand_id')->where('tbl_product.product_id', $product_id)->limit(1)->get();
 
-        return view('pages.sanpham.show_details')->with('category_product' , $cate_product)->with('brand_product' , $brand_product)->with('detail_product' , $details_product);
+        foreach($details_product as $key=>$value){
+            $category_id = $value->category_id;
+        }
+
+        $related_product = DB::table('tbl_product')->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')->join('tbl_brand_product','tbl_brand_product.brand_id','=','tbl_product.brand_id')->where('tbl_category_product.category_id', $category_id)->whereNotIn('tbl_product.product_id',[$product_id])->get();
+
+        return view('pages.sanpham.show_details')->with('category_product' , $cate_product)->with('brand_product' , $brand_product)->with('detail_product' , $details_product)->with('relate', $related_product);
         // return view('pages.sanpham.show_details')->with('category_product' , $cate_product)->with('brand_product' , $brand_product);
         // return view('pages.sanpham.show_details',compact('cate_product','brand_product','detail_product'));
     }

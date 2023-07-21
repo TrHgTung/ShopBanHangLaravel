@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryProduct;
 use App\Http\Controllers\BrandProduct;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,3 +61,6 @@ Route::post('/update-product/{product_id}', [ProductController::class, 'update_p
 Route::get('/danh-muc-san-pham/{category_id}', [CategoryProduct::class, 'show_category_home']);  // trang danh mục sp theo id sphẩm
 Route::get('/thuong-hieu-san-pham/{brand_id}', [BrandProduct::class, 'show_brand_home']);  // trang danh mục sp theo id sphẩm
 Route::get('/chi-tiet-san-pham/{product_id}', [ProductController::class, 'details_product']);  // trang danh mục sp theo id sphẩm
+// Cart gio hangf
+
+Route::post('/save-cart', [CartController::class, 'save_cart']);
