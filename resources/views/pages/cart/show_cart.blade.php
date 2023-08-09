@@ -60,16 +60,6 @@
 					</tbody>
 				</table>
 			</div>
-            <div>
-                <?php
-                    // $content = Cart::content();
-
-                    // echo '<pre>';
-                    // print_r($content);
-                    // echo '</pre>';
-                    // Cart::clear();
-                ?>
-            </div>
 		</div>
 	</section> <!--/#cart_items-->
 
