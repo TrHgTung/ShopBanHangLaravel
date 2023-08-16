@@ -8,6 +8,7 @@ use App\Http\Controllers\BrandProduct;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,3 +68,6 @@ Route::post('/update-cart-quantity', [CartController::class, 'update_cart_quanti
 Route::post('/save-cart', [CartController::class, 'save_cart']);
 Route::get('/show-cart', [CartController::class, 'show_cart']);
 Route::get('/delete-to-cart/{rowId}', [CartController::class, 'delete_to_cart']);
+
+// Thanh toán
+Route::get('/login-checkout', [CheckoutController::class, 'login_checkout']);
