@@ -61,8 +61,9 @@ Route::post('/update-product/{product_id}', [ProductController::class, 'update_p
 Route::get('/danh-muc-san-pham/{category_id}', [CategoryProduct::class, 'show_category_home']);  // trang danh mục sp theo id sphẩm
 Route::get('/thuong-hieu-san-pham/{brand_id}', [BrandProduct::class, 'show_brand_home']);  // trang danh mục sp theo id sphẩm
 Route::get('/chi-tiet-san-pham/{product_id}', [ProductController::class, 'details_product']);  // trang danh mục sp theo id sphẩm
-// Cart gio hangf
 
+// Cart gio hangf
+Route::post('/update-cart-quantity', [CartController::class, 'update_cart_quantity']);
 Route::post('/save-cart', [CartController::class, 'save_cart']);
 Route::get('/show-cart', [CartController::class, 'show_cart']);
 Route::get('/delete-to-cart/{rowId}', [CartController::class, 'delete_to_cart']);

@@ -2,8 +2,7 @@
 @section('content')
 
 <div class="features_items">
-	<h2 class="title text-center">Về chúng tôi</h2>
-	<p>Images carousel > about us > slider (about / store / history / which sell for ...)</p>
+
 	<!-- !!! -->
 	<h2 class="title text-center">Sản phẩm mới</h2>
 	@foreach($all_product as $key => $product)
@@ -34,7 +33,10 @@
 	    	</div>
 		</div>
 	@endforeach
-						
-</div>
+		<div class="mt-4 mb-4">
+			<h2 class="title text-center">Về chúng tôi</h2>
+			<p>Images carousel > about us > slider (about / store / history / which sell for ...)</p>					
+		</div>
+	</div>
 
 @endsection

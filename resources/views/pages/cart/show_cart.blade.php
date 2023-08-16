@@ -44,9 +44,12 @@
                                 </td>
                                 <td class="cart_quantity">
                                     <div class="cart_quantity_button">
-                                        <a class="cart_quantity_up" href=""> + </a>
-                                        <input class="cart_quantity_input" type="text" name="quantity" value="{{$v_content->qty}}" autocomplete="off" size="2">
-                                        <a class="cart_quantity_down" href=""> - </a>
+										<form action="{{URL::to('/update-cart-quantity')}}" method="POST">
+											{{ csrf_field() }}
+											<input type="number" class="cart_quantity_input"  name="cart_quantity" value="{{$v_content->qty}}" min="1">
+											<input type="hidden" class="form-control" value="{{$v_content->rowId}}" name="rowId_cart">
+											<input type="submit" class="btn btn-default btn-sm" value="Cập nhật" name="update_qty">
+										</form>
                                     </div>
                                 </td>
                                 <td class="cart_total">
@@ -78,13 +81,12 @@
 				<div class="col-sm-6">
 					<div class="total_area">
 						<ul>
-							<li>Cart Sub Total <span>{{number_format(Cart::total())}} VND</span></li>
-							<li>Eco Tax <span>{{number_format(Cart::tax())}} VND</span></li>
-							<li>Shipping Cost <span>Free</span></li>
-							<li>Total <span>{{number_format(Cart::total())}} VND</span></li>
+							<li>Tạm tính <span>{{number_format(Cart::total())}} VND</span></li>
+							<li>Thuế <span>{{number_format(Cart::tax())}} VND</span></li>
+							<li>Phí vận chuyển <span>Free</span></li>
+							<li>Phải trả <span>{{number_format(Cart::total())}} VND</span></li>
 						</ul>
-							<a class="btn btn-default update" href="">Update</a>
-							<a class="btn btn-default check_out" href="">Check Out</a>
+							<a class="btn btn-default check_out" href="{{URL::to('/login-checkout')}}">Đi đến Thanh toán</a>
 					</div>
 				</div>
 			</div>
