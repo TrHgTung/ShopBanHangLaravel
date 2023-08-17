@@ -36,7 +36,7 @@ class CheckoutController extends Controller
     }
 
     public function checkout(){
-        echo "hello checkout";
+        echo "bài 39";
         // return view();
     }
 }
