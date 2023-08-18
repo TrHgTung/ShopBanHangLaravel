@@ -86,8 +86,21 @@
 							<li>Phí vận chuyển <span>Free</span></li>
 							<li>Phải trả <span>{{number_format(Cart::total())}} VND</span></li>
 						</ul>
-							<a class="btn btn-default check_out" href="{{URL::to('/login-checkout')}}">Đi đến Thanh toán</a>
-					</div>
+						<?php
+									$customer_id = Session::get('customer_id');
+									// ham check session user
+									if($customer_id != NULL){
+								?>
+									 <a href="{{URL::to('/checkout')}}"> <input type="button" class="btn btn-primary" value="Thanh toán"></a>
+								<?php 
+									}
+									else{
+								?>
+									<a href="{{URL::to('/login-checkout')}}"> <input type="button" class="btn btn-primary" value="Thanh toán"></a>
+								<?php
+									}
+								?>					
+						</div>
 				</div>
 			</div>
 		</div>

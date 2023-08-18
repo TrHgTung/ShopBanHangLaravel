@@ -57,40 +57,45 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.html"><img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" alt="" width="75" height="75" /></a>
 						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canada</a></li>
-									<li><a href="#">UK</a></li>
-								</ul>
-							</div>
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canadian Dollar</a></li>
-									<li><a href="#">Pound</a></li>
-								</ul>
-							</div>
-						</div>
+						
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-user"></i> Cá nhân</a></li>
+								<li><a href="#"><i class="fa fa-user"></i> Xin chào, <?php $customer_id = Session::get('customer_id'); echo $customer_id; ?></a></li>
 								<li><a href="{{URL::to('/')}}"><i class="fa fa-star"></i> Thịnh hành</a></li>
-								<li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+								<?php
+									$customer_id = Session::get('customer_id');
+									// ham check session user
+									if($customer_id != NULL){
+								?>
+									<li><a href="{{URL::to('/checkout')}}"><i class="fa fa-lock"></i> Thanh toán</a></li>
+								<?php 
+									}
+									else{
+								?>
+									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Thanh toán</a></li>
+								<?php
+									}
+								?>
 								<li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
-								<li><a href="{{URL::to('/user-logout')}}"><i class="fa fa-lock"></i> Đăng xuất</a></li>
+								<?php
+									$customer_id = Session::get('customer_id');
+									// ham check session user
+									if($customer_id != NULL){
+								?>
+									<li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i> Đăng xuất</a></li>
+								<?php 
+									}
+									else{
+								?>
+									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+								<?php
+									}
+								?>
+								
 							</ul>
 						</div>
 					</div>

@@ -73,3 +73,5 @@ Route::get('/delete-to-cart/{rowId}', [CartController::class, 'delete_to_cart'])
 Route::get('/login-checkout', [CheckoutController::class, 'login_checkout']);
 Route::post('/add-customer', [CheckoutController::class, 'add_customer']);
 Route::get('/checkout', [CheckoutController::class, 'checkout']);
+Route::post('/save-checkout-customer', [CheckoutController::class, 'save_checkout_customer']);
+Route::get('payment', [CheckoutController::class, 'payment']);
