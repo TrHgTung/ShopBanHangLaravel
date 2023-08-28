@@ -25,7 +25,7 @@ class CheckoutController extends Controller
         $data = array();
         $data['customer_name'] = $request->customer_name;
         $data['customer_email'] = $request->customer_email;
-        $data['customer_password'] = $request->customer_password;
+        $data['customer_password'] = md5($request->customer_password);
         $data['customer_phone'] = $request->customer_phone;
 
         $customer_id = DB::table('tbl_customers')->insertGetId($data);
@@ -33,7 +33,7 @@ class CheckoutController extends Controller
         Session::put('customer_id', $customer_id);
         Session::put('customer_name',  $request->customer_name);
 
-        return Redirect('/checkout');
+        return Redirect::to('/checkout');
     }
 
     public function checkout(){
@@ -64,7 +64,7 @@ class CheckoutController extends Controller
         Session::put('shipping_id', $shipping_id);
         // Session::put('customer_name',  $request->customer_name);
 
-        return Redirect('/payment');
+        return Redirect::to('/payment');
     }
 
     public function payment(){
@@ -74,5 +74,33 @@ class CheckoutController extends Controller
 
         // return view("pages.checkout.show_checkout")->with('category_product' , $cate_product)->with('brand_product' , $brand_product);
         echo "Hello shipping";
+    }
+
+    public function logout_checkout(){
+        Session::flush();
+
+        return Redirect::to('/login-checkout');
+    }
+
+    public function login_customer(Request $request){
+        $email = $request->email_account;
+        $password = md5($request->password_account);
+
+        $result = DB::table('tbl_customers')->where('customer_email', $email)->where('customer_password', $password)->first();
+
+        if($result){
+            // Lấy dữ liệu từ các cột tương ứng
+            Session::put('customer_id', $result->customer_id);
+            Session::put('customer_name', $result->customer_name);
+            // Chuyển hướng tới trang
+            return Redirect::to('/checkout');
+        }else{
+            return Redirect::to('/login-checkout');
+
+        }
+        
+        // Session::put('customer_name',  $request->customer_name);
+
+        
     }
 }

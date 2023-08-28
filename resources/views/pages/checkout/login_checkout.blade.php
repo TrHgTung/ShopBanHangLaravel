@@ -8,7 +8,8 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Đăng nhập vào tài khoản của bạn</h2>
-						<form action="#">
+						<form action="{{URL::to('/login-customer')}}" method="post">
+							{{ csrf_field() }}
 							<input type="text" name="email_account" placeholder="Địa chỉ E-mail" />
 							<input type="password" name="password_account" placeholder="Mật khẩu" />
 							<span>

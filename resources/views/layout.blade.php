@@ -64,7 +64,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Xin chào, <?php $customer_id = Session::get('customer_id'); echo $customer_id; ?></a></li>
+								<li><a href="#"><i class="fa fa-user"></i> Xin chào, <?php $customer_id = Session::get('customer_name'); echo $customer_id; ?></a></li>
 								<li><a href="{{URL::to('/')}}"><i class="fa fa-star"></i> Thịnh hành</a></li>
 								<?php
 									$customer_id = Session::get('customer_id');
