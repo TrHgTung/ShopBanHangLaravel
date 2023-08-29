@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Cart;
 use App\Http\Requests;
 use Session;
 use App\Slider;
@@ -102,5 +103,52 @@ class CheckoutController extends Controller
         // Session::put('customer_name',  $request->customer_name);
 
         
+    }
+
+    public function order_place(Request $request){
+        $data = array();
+        // insert phuong thuc thanh toan
+        $data['payment_method'] = $request->payment_option;
+        $data['payment_status'] = 'Dang cho xu ly (pending)';
+
+        $payment_id = DB::table('tbl_payment')->insertGetId($data);
+
+        // insert vao tbl_order
+        $order_data = array();
+        $order_data['customer_id'] = Session::get('customer_id');
+        $order_data['shipping_id'] = Session::get('shipping_id');
+        $order_data['payment_id'] =  $payment_id;
+        $order_data['order_total'] =  Cart::total();
+        $order_data['order_status'] = 'Dang cho xu ly (pneding)';
+
+        $order_id = DB::table('tbl_order')->insertGetId($order_data);
+
+        // insert vao tbl_order_details
+        $content = Cart::content();
+
+        foreach($content as $v_content ){
+            $order_d_data = array();
+            $order_d_data['order_id'] = $order_id;
+            $order_d_data['product_id'] = $v_content->id;
+            $order_d_data['product_name'] =   $v_content->name;
+            $order_d_data['product_price'] = $v_content->price;
+            $order_d_data['product_sales_quantity'] =  $v_content->qty;
+
+            DB::table('tbl_order_details')->insert($order_d_data);
+        }
+        if($data['payment_method'] == '1'){
+            echo 'Bank Account';
+        } else if($data['payment_method'] == '2'){
+            // echo 'Cash';
+            Cart::destroy();
+            $cate_product = DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
+            $brand_product = DB::table('tbl_brand_product')->where('brand_status','1')->orderby('brand_id','desc')->get();
+    
+            return view("pages.checkout.thankyou_cash")->with('category_product' , $cate_product)->with('brand_product' , $brand_product);
+        
+        } else{
+            echo 'MoMo';
+        }
+        // return Redirect::to('/payment');
     }
 }

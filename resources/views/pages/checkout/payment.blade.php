@@ -72,18 +72,23 @@
 					</tbody>
 				</table>
 			</div>
-            
+
 			<div class="payment-options">
-					<span>
-						<label><input name="payment_option" value="1" type="checkbox"> Thẻ Ngân hàng Nội địa</label>
-					</span>
-					<span>
-						<label><input name="payment_option" value="2" type="checkbox"> Trả bằng tiền mặt (sau khi nhận được sản phẩm)</label>
-					</span>
-					<span>
-						<label><input name="payment_option" value="3" type="checkbox"> MoMo (đang phát triển)</label>
-					</span>
-				</div>
+                <form action="{{URL::to('/order-place')}}" method="post">
+                    {{ csrf_field() }}
+                    <h4><strong>Chọn một hình thức thanh toán</strong></h4>
+                        <span>
+                            <label><input name="payment_option" value="1" type="radio"> Thẻ Ngân hàng Nội địa</label>
+                        </span>
+                        <span>
+                            <label><input name="payment_option" value="2" type="radio"> Trả bằng tiền mặt (sau khi nhận được sản phẩm)</label>
+                        </span>
+                        <span>
+                            <label><input name="payment_option" value="3" type="radio"> MoMo (đang phát triển)</label>
+                        </span>
+                        <input type="submit" value="Đặt hàng" name="send_order_place" class="btn btn-primary btn-sm">
+                </form>
+            </div>
 		</div>
 	</section> <!--/#cart_items-->
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\StaticPageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,7 +75,11 @@ Route::get('/delete-to-cart/{rowId}', [CartController::class, 'delete_to_cart'])
 Route::get('/login-checkout', [CheckoutController::class, 'login_checkout']);
 Route::post('/add-customer', [CheckoutController::class, 'add_customer']);
 Route::post('/login-customer', [CheckoutController::class, 'login_customer']);
+Route::post('/order-place', [CheckoutController::class, 'order_place']);
 Route::get('/checkout', [CheckoutController::class, 'checkout']);
 Route::post('/save-checkout-customer', [CheckoutController::class, 'save_checkout_customer']);
 Route::get('/payment', [CheckoutController::class, 'payment']);
 Route::get('/logout-checkout', [CheckoutController::class, 'logout_checkout']);
+
+// van chuyen
+Route::get('/product/van-chuyen', [StaticPageController::class, 'van_chuyen']);
