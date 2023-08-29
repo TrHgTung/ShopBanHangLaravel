@@ -186,4 +186,5 @@ class ProductController extends Controller
         // return view('pages.sanpham.show_details')->with('category_product' , $cate_product)->with('brand_product' , $brand_product);
         // return view('pages.sanpham.show_details',compact('cate_product','brand_product','detail_product'));
     }
+    
 }

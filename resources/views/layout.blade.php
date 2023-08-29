@@ -127,8 +127,7 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
-								<li ><a href="404.html">Sản phẩm</a></li> 
-								<li class="dropdown"><a href="#">Tin tức</a></li> 
+								<li ><a href="{{URL::to('/khuyen-mai')}}">Khuyến mãi</a></li>
 								<li><a href="{{URL::to('/show-cart')}}">Giỏ hàng</a></li>
 								<li><a href="contact-us.html">Liên hệ</a></li>
 							</ul>

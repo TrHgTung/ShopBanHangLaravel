@@ -44,4 +44,9 @@ class HomeController extends Controller
         return view('pages.sanpham.search')->with('category_product' , $cate_product)->with('brand_product' , $brand_product)->with('search_product', $search_product);
 
     }
+
+    public function show_all_promotions(){
+        // add new tbl_promotion > query data from tbl_promotion > show in view UI
+        return view('pages.promotion.show_promotions');
+    }
 }
