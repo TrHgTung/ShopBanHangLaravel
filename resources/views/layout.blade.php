@@ -25,6 +25,10 @@
 </head><!--/head-->
 
 <body>
+	<?php
+		// echo Session::get('customer_id').' and '.Session::get('shipping_id');
+		// echo Session::get('shipping_id');
+	?>
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -68,15 +72,20 @@
 								<li><a href="{{URL::to('/')}}"><i class="fa fa-star"></i> Thịnh hành</a></li>
 								<?php
 									$customer_id = Session::get('customer_id');
+									$shipping_id = Session::get('shipping_id');
 									// ham check session user
-									if($customer_id != NULL){
+									if($customer_id != NULL && $shipping_id == NULL){ // da login nhung chua nhap thong tin ship
 								?>
-									<li><a href="{{URL::to('/checkout')}}"><i class="fa fa-lock"></i> Thanh toán</a></li>
+									<li><a href="{{URL::to('/checkout')}}"><i class="fa fa-lock"></i> K.Tra Thanh Toán</a></li>
 								<?php 
 									}
-									else{
+									else if($customer_id != NULL && $shipping_id != NULL){ // da authen day du
 								?>
-									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Thanh toán</a></li>
+									<li><a href="{{URL::to('/payment')}}"><i class="fa fa-lock"></i> Thanh toán</a></li>
+								<?php
+									} else{ // chua authen gi het
+								?>
+									<!-- <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Thanh toán</a></li> -->
 								<?php
 									}
 								?>
