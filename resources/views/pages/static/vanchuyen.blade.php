@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trạng thái vận chuyển</title>
-    <link rel="stylesheet" href="{{URL::to('/public/frontend/css/static.css')}}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <div>
-        <a href="{{URL::to('/')}}">Quay về trang chủ</a>
-    </div>
-<div class="container px-1 px-md-4 py-5 mx-auto">
+
+@extends('staticLayout')
+@section('display')
+
+
     <div class="card">
         <div class="row d-flex justify-content-between px-3 top">
             <div class="d-flex">
@@ -64,6 +51,5 @@
             </div>
         </div>
     </div>
-</div>
-</body>
-</html>
+
+@endsection

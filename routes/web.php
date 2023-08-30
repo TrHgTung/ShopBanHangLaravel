@@ -29,6 +29,7 @@ Route::get('/admin-login', [AdminController::class,'login']); // trang login cho
 Route::get('/admin', [AdminController::class,'show_dashboard']); // trang index admin
 Route::post('/admin-dashboard', [AdminController::class,'dashboard']); // trang index admin (yeu cau login truoc)
 Route::get('/logout', [AdminController::class,'logout']); // logout admin
+// Route::get('/static-layout', [StaticPageController::class,'index']); // layout static
 Route::get('/khuyen-mai', [HomeController::class,'show_all_promotions']); // show khuyen mai (promotion)
 
 // CategoryProduct (Quan ly danh muc)

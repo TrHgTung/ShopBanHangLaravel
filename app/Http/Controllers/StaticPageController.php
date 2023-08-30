@@ -10,4 +10,9 @@ class StaticPageController extends Controller
         //
         return view('pages.static.vanchuyen');
     }
+
+    public function index (Request $request){
+        //
+        return view('staticLayout');
+    }
 }

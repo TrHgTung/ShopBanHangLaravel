@@ -46,7 +46,7 @@ class HomeController extends Controller
     }
 
     public function show_all_promotions(){
-        // add new tbl_promotion > query data from tbl_promotion > show in view UI
+        // add new tbl_promotion > query data from tbl_promotion > show in view UI (view: get template (paralax view))
         return view('pages.promotion.show_promotions');
     }
 }
