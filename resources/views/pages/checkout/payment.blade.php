@@ -74,8 +74,12 @@
 			</div>
 
 			<div class="payment-options">
-                <form action="{{URL::to('/order-place')}}" method="post">
+                <form action="{{URL::to('/order-place')}}" method="POST">
+                    <?php
+                        $total_after = number_format($v_content->price * $v_content->qty);
+                    ?>
                     {{ csrf_field() }}
+                    <input type="hidden" name="total_momo" value="{{$total_after}}">
                     <h4><strong>Chọn một hình thức thanh toán</strong></h4>
                         <span>
                             <label><input name="payment_option" value="1" type="radio"> Thẻ Ngân hàng Nội địa</label>
@@ -86,8 +90,14 @@
                         <span>
                             <label><input name="payment_option" value="3" type="radio"> MoMo (đang phát triển)</label>
                         </span>
+                        
                         <input type="submit" value="Đặt hàng" name="send_order_place" class="btn btn-primary btn-sm">
                 </form>
+                <!-- <form action="{{URL::to('/order-place')}}" method="POST">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="total_momo" value="{{$total_after}}">
+                    <input type="submit" value="MoMo Test" class="btn btn-default" name="payUrl">
+                </form> -->
             </div>
 		</div>
 	</section> <!--/#cart_items-->

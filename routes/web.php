@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\StaticPageController;
+use App\Http\Controllers\MoMoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -85,3 +86,6 @@ Route::get('/logout-checkout', [CheckoutController::class, 'logout_checkout']);
 
 // van chuyen
 Route::get('/product/van-chuyen', [StaticPageController::class, 'van_chuyen']);
+
+// MoMo
+Route::post('/momo-payment', [MoMoController::class, 'momo_payment']);
