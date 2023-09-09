@@ -148,7 +148,7 @@ class CheckoutController extends Controller
         
         } else if($data['payment_method'] == '3'){
             // echo 'MoMo';
-            return redirect()->to("/momo-payment"); // fix
+            return redirect()->to("/momo-result"); // fix
         }
         else{
             echo 'Vui lòng quay lại và chọn 1 phương thức thanh toán (bắt buộc)';

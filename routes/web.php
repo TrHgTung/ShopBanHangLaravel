@@ -88,4 +88,5 @@ Route::get('/logout-checkout', [CheckoutController::class, 'logout_checkout']);
 Route::get('/product/van-chuyen', [StaticPageController::class, 'van_chuyen']);
 
 // MoMo
+Route::get('/momo-result', [MoMoController::class, 'momo_payment']);
 Route::post('/momo-payment', [MoMoController::class, 'momo_payment']);
