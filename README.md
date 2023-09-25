@@ -7,12 +7,16 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Cách sử dụng:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- `composer update`
-- `php artisan key:generate`
+Cài đặt Composer ; XAMPP ; mở terminal tại vị trí thư mục của source và chạy lần lượt 2 câu lệnh sau
+- Cập nhật các gói thư viện Laravel: `composer update`
+- Tạo key truy cập ứng dụng Laravel: `php artisan key:generate`
+- Khởi động XAMPP (Run as administrator/Global active) và chạy 2 dịch vụ Apache và MySQL
+- Mặc định source chạy ở `127.0.0.1:80`
+- Khởi tạo cơ sở dữ liệu: Tạo 1 db tên `elaravel` (có thể config trong file .env bằng cách thay đổi giá trị `DB_DATABASE`)
+- Sau đó chạy đoạn lệnh `php artisan migrate` để chạy các file seed ra CSDL. Tài liệu Laravel migration DB: <a>https://laravel.com/docs/10.x/migrations</a>
+- Tùng đẹp trai =))
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
