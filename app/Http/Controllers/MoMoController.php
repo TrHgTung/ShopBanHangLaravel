@@ -45,7 +45,7 @@ class MoMoController extends Controller
         $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
         $orderInfo = "Thanh toán qua ATM - MoMo";
         // $amount = $_POST['total_momo'];
-        $amount = "10000";
+        $amount = "129000";
         $orderId = time() . "";
         $redirectUrl = "http://localhost/ShopBanHangLaravel/payment";
         $ipnUrl = "http://localhost/ShopBanHangLaravel/payment";

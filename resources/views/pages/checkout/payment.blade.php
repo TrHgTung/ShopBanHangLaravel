@@ -46,7 +46,7 @@
                                 </td>
                                 <td class="cart_description">
                                     <h4><a href="">{{$v_content->name}}</a></h4>
-                                    <p>Web ID: 1089772</p>
+                                    <p>.</p>
                                 </td>
                                 <td class="cart_price">
                                     <p>{{number_format($v_content->price)}} VND</p>
@@ -91,8 +91,11 @@
                             <label><input name="payment_option" value="3" type="radio"> MoMo (đang phát triển)</label>
                         </span>
                         
-                        <input type="submit" value="Đặt hàng" name="send_order_place" class="btn btn-primary btn-sm">
+                        <input type="submit" value="Thanh toán & Đặt hàng" name="send_order_place" class="btn btn-primary btn-sm">
                 </form>
+                <?php
+                    print($total_after);
+                ?>
                 <!-- <form action="{{URL::to('/order-place')}}" method="POST">
                     {{ csrf_field() }}
                     <input type="hidden" name="total_momo" value="{{$total_after}}">
