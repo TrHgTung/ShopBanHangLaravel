@@ -10,7 +10,7 @@
                         <div class="panel-body">
                             @foreach($edit_category_product as $key => $edit_value) 
                             <div class="position-center">
-                                <form role="form" action="{{URL::to('/update-category-product/'.$edit_value->category_id)}}" method="post">
+                                <form role="form" action="{{URL::to('/admin/update-category-product/'.$edit_value->category_id)}}" method="post">
                                     {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Thay đổi tên Danh mục</label>

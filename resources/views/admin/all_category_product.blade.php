@@ -57,19 +57,19 @@
                 <?php
                     if($cate_pro->category_status == 0){
                 ?>
-                    Đang Ẩn. <a href="{{URL::to('/inactive-category-product/'.$cate_pro->category_id)}}">Hiển thị?</a>
+                    Đang Ẩn. <a href="{{URL::to('/admin/inactive-category-product/'.$cate_pro->category_id)}}">Hiển thị?</a>
                 <?php
                     } else{
                 ?>
                     
-                    Đang Hiển Thị. <a href="{{URL::to('/active-category-product/'.$cate_pro->category_id)}}">Ẩn?</a>
+                    Đang Hiển Thị. <a href="{{URL::to('/admin/active-category-product/'.$cate_pro->category_id)}}">Ẩn?</a>
                 <?php 
                     } 
                 ?>
             </span></td>
             <td>
-              <a href="{{URL::to('/edit-category-product/'.$cate_pro->category_id)}}" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
-              <a onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')" href="{{URL::to('/delete-category-product/'.$cate_pro->category_id)}}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+              <a href="{{URL::to('/admin/edit-category-product/'.$cate_pro->category_id)}}" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
+              <a onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')" href="{{URL::to('/admin/delete-category-product/'.$cate_pro->category_id)}}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
             </td>
           </tr>
           @endforeach

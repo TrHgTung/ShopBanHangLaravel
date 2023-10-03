@@ -57,19 +57,19 @@
                 <?php
                     if($brand_pro->brand_status == 0){
                 ?>
-                    Đang Ẩn. <a href="{{URL::to('/inactive-brand-product/'.$brand_pro->brand_id)}}">Hiển thị?</a>
+                    Đang Ẩn. <a href="{{URL::to('/admin/inactive-brand-product/'.$brand_pro->brand_id)}}">Hiển thị?</a>
                 <?php
                     } else{
                 ?>
                     
-                    Đang Hiển Thị. <a href="{{URL::to('/active-brand-product/'.$brand_pro->brand_id)}}">Ẩn?</a>
+                    Đang Hiển Thị. <a href="{{URL::to('/admin/active-brand-product/'.$brand_pro->brand_id)}}">Ẩn?</a>
                 <?php 
                     } 
                 ?>
             </span></td>
             <td>
-              <a href="{{URL::to('/edit-brand-product/'.$brand_pro->brand_id)}}" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
-              <a onclick="return confirm('Bạn có chắc chắn loại bỏ thương hiệu này? Việc loại bỏ thương hiệu đồng nghĩa với việc ngừng hợp tác kinh doanh với đơn vị cung cấp!')" href="{{URL::to('/delete-brand-product/'.$brand_pro->brand_id)}}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+              <a href="{{URL::to('/admin/edit-brand-product/'.$brand_pro->brand_id)}}" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
+              <a onclick="return confirm('Bạn có chắc chắn loại bỏ thương hiệu này? Việc loại bỏ thương hiệu đồng nghĩa với việc ngừng hợp tác kinh doanh với đơn vị cung cấp!')" href="{{URL::to('/admin/delete-brand-product/'.$brand_pro->brand_id)}}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
             </td>
           </tr>
           @endforeach

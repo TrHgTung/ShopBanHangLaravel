@@ -100,8 +100,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Quản lý danh mục sản phẩm</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/add-category-product')}}">Thêm danh mục mới</a></li>
-						<li><a href="{{URL::to('/all-category-product')}}">Xem danh mục hiện có</a></li>
+						<li><a href="{{URL::to('/admin/add-category-product')}}">Thêm danh mục mới</a></li>
+						<li><a href="{{URL::to('/admin/all-category-product')}}">Xem danh mục hiện có</a></li>
                         <!-- <li><a href="grids.html">Promotions</a></li> -->
                     </ul>
                 </li>
@@ -111,8 +111,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Quản lý nhãn hàng/thương hiệu</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/add-brand-product')}}">Thêm mới</a></li>
-						<li><a href="{{URL::to('/all-brand-product')}}">Xem tất cả hiện có</a></li>
+						<li><a href="{{URL::to('/admin/add-brand-product')}}">Thêm mới</a></li>
+						<li><a href="{{URL::to('/admin/all-brand-product')}}">Xem tất cả hiện có</a></li>
                         <!-- <li><a href="grids.html">Promotions</a></li> -->
                     </ul>
                 </li>
@@ -122,8 +122,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Quản lý sản phẩm</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/add-product')}}">Thêm sản phẩm mới</a></li>
-						<li><a href="{{URL::to('/all-product')}}">Xem tất cả</a></li>
+						<li><a href="{{URL::to('/admin/add-product')}}">Thêm sản phẩm mới</a></li>
+						<li><a href="{{URL::to('/admin/all-product')}}">Xem tất cả</a></li>
                         <!-- <li><a href="grids.html">Promotions</a></li> -->
                     </ul>
                 </li>

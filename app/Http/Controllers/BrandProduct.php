@@ -57,7 +57,7 @@ class BrandProduct extends Controller
         DB::table('tbl_brand_product')->insert($data);
 
         Session::put('message', 'Thành công! Đã xác nhận hợp tác với thương hiệu!');
-        return Redirect::to('all-brand-product');
+        return Redirect::to('admin/all-brand-product');
     }
 
     public function inactive_brand_product ($brand_product_id)
@@ -65,7 +65,7 @@ class BrandProduct extends Controller
         $this->AuthLogin();
         DB::table('tbl_brand_product')->where('brand_id', $brand_product_id)->update(['brand_status'=>1]);
         Session::put('message','Thương hiệu đã hiển thị');
-        return Redirect::to('all-brand-product');
+        return Redirect::to('admin/all-brand-product');
     }
 
     public function active_brand_product ($brand_product_id)
@@ -73,7 +73,7 @@ class BrandProduct extends Controller
         $this->AuthLogin();
         DB::table('tbl_brand_product')->where('brand_id',$brand_product_id)->update(['brand_status'=>0]);
         Session::put('message','Thương hiệu đã ẩn');
-        return Redirect::to('all-brand-product');
+        return Redirect::to('admin/all-brand-product');
     }
 
     public function edit_brand_product ($brand_product_id)
@@ -93,7 +93,7 @@ class BrandProduct extends Controller
 
         DB::table('tbl_brand_product')->where('brand_id', $brand_product_id)->update($data);
         Session::put('message','Thương hiệu đối tác đã cập nhật thành công');
-        return Redirect::to('all-brand-product');
+        return Redirect::to('admin/all-brand-product');
     }
 
     public function delete_brand_product ( $brand_product_id)
@@ -101,7 +101,7 @@ class BrandProduct extends Controller
         $this->AuthLogin();
         DB::table('tbl_brand_product')->where('brand_id', $brand_product_id)->delete();
         Session::put('message','Đã ngừng hợp tác với thương hiệu');
-        return Redirect::to('all-brand-product');
+        return Redirect::to('admin/all-brand-product');
     }
     // End Admin Site
 

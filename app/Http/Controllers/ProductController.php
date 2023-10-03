@@ -78,14 +78,14 @@ class ProductController extends Controller
             DB::table('tbl_product')->insert($data);
 
             Session::put('message', 'Thành công! Đã thêm sản phẩm!');
-            return Redirect::to('all-product');
+            return Redirect::to('admin/all-product');
         }
         $data['product_image'] = '';
 
         DB::table('tbl_product')->insert($data);
 
         Session::put('message', 'Thành công! Đã thêm sản phẩm!');
-        return Redirect::to('all-product');
+        return Redirect::to('admin/all-product');
     }
 
     public function inactive_product ($product_id)
@@ -93,7 +93,7 @@ class ProductController extends Controller
         $this->AuthLogin();
         DB::table('tbl_product')->where('product_id', $product_id)->update(['status'=>1]);
         Session::put('message','Sản phẩm đã hiển thị');
-        return Redirect::to('all-product');
+        return Redirect::to('admin/all-product');
     }
 
     public function active_product ($product_id)
@@ -101,7 +101,7 @@ class ProductController extends Controller
         $this->AuthLogin();
         DB::table('tbl_product')->where('product_id',$product_id)->update(['status'=>0]);
         Session::put('message','Sản phẩm đã ẩn');
-        return Redirect::to('all-product');
+        return Redirect::to('admin/all-product');
     }
 
     public function edit_product ($product_id)
@@ -146,14 +146,14 @@ class ProductController extends Controller
             DB::table('tbl_product')->where('product_id', $product_id)->update($data);
 
             Session::put('message', 'Thành công! Đã cập nhật sản phẩm!');
-            return Redirect::to('all-product');
+            return Redirect::to('admin/all-product');
         }
         // $data['product_image'] = '';
 
         DB::table('tbl_product')->where('product_id', $product_id)->update($data);
 
         Session::put('message', 'Thành công! Đã cập nhật sản phẩm!');
-        return Redirect::to('all-product');
+        return Redirect::to('admin/all-product');
 
         // DB::table('tbl_product')->where('product_id', $product_id)->update($data);
         // Session::put('message','Sản phẩm đã cập nhật thành công');
@@ -166,7 +166,7 @@ class ProductController extends Controller
         
         DB::table('tbl_product')->where('product_id', $product_id)->delete();
         Session::put('message','Đã xóa sản phẩm!');
-        return Redirect::to('all-product');
+        return Redirect::to('admin/all-product');
     }
     // end of admin site
     // ------------

@@ -56,7 +56,7 @@ class CategoryProduct extends Controller
         DB::table('tbl_category_product')->insert($data);
 
         Session::put('message', 'Thành công! Danh mục sản phẩm đã được thêm!');
-        return Redirect::to('all-category-product');
+        return Redirect::to('admin/all-category-product');
     }
 
     public function inactive_category_product ($category_product_id)
@@ -64,7 +64,7 @@ class CategoryProduct extends Controller
         $this->AuthLogin();
         DB::table('tbl_category_product')->where('category_id', $category_product_id)->update(['category_status'=>1]);
         Session::put('message','Danh mục sản phẩm đã hiển thị');
-        return Redirect::to('all-category-product');
+        return Redirect::to('admin/all-category-product');
     }
 
     public function active_category_product ($category_product_id)
@@ -72,7 +72,7 @@ class CategoryProduct extends Controller
         $this->AuthLogin();
         DB::table('tbl_category_product')->where('category_id',$category_product_id)->update(['category_status'=>0]);
         Session::put('message','Danh mục sản phẩm đã ẩn');
-        return Redirect::to('all-category-product');
+        return Redirect::to('admin/all-category-product');
     }
 
     public function edit_category_product ($category_product_id)
@@ -93,7 +93,7 @@ class CategoryProduct extends Controller
 
         DB::table('tbl_category_product')->where('category_id', $category_product_id)->update($data);
         Session::put('message','Danh mục sản phẩm đã cập nhật thành công');
-        return Redirect::to('all-category-product');
+        return Redirect::to('admin/all-category-product');
     }
 
     public function delete_category_product ( $category_product_id)
@@ -101,7 +101,7 @@ class CategoryProduct extends Controller
         $this->AuthLogin();
         DB::table('tbl_category_product')->where('category_id', $category_product_id)->delete();
         Session::put('message','Đã xóa sản phẩm thành công');
-        return Redirect::to('all-category-product');
+        return Redirect::to('admin/all-category-product');
     }
 
     // END ADMIN SITE
