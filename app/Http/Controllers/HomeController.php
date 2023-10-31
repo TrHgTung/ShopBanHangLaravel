@@ -45,8 +45,26 @@ class HomeController extends Controller
 
     }
 
-    public function show_all_promotions(){
+    public function show_all_promotions(Request $request){
         // add new tbl_promotion > query data from tbl_promotion > show in view UI (view: get template (paralax view))
         return view('pages.promotion.show_promotions');
+    }
+
+    public function autocomplete_ajax(Request $request){
+        // $data = $request->all();
+        // if($data['query']){
+        if($request->get('query'))
+        {
+            $query = $request->get('query');
+            $product = DB::table('tbl_product')->where('product_status',1)->where('product_name','LIKE',"%{$query}%")->get();
+
+            $output = '<ul class="dropdown-menu" style="display:block; position:relative;">';
+
+            foreach($product as $key => $val){
+                $output .= '<li><a class="dropdown-item" href="#">'.$val->product_name.'</a></li>';
+            }
+            $output .= '</ul>';
+            echo $output;
+        }
     }
 }

@@ -13,6 +13,9 @@
     <link href="{{asset('public/frontend/css/animate.css')}}" rel="stylesheet">
 	<link href="{{asset('public/frontend/css/main.css')}}" rel="stylesheet">
 	<link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.map"></script>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -134,10 +137,12 @@
 						</div>
 					</div>
 					<div class="col-sm-4">
-						<form action="{{URL::to('/tim-kiem')}}" method="post">
+						<form action="{{URL::to('/tim-kiem')}}" autocomplete="off" method="post">
 							{{ csrf_field() }}
 							<div class="search_box pull-right">
-								<input type="text" name="keywords_submit" placeholder="Tìm kiếm bằng từ khóa"/>
+								<input type="text" name="keywords_submit" id="keywords" placeholder="Tìm kiếm bằng từ khóa"/>
+								<div id="search_ajax"></div>
+
 								<input type="submit" style="margin-top:0px; color:#ffffff" name="search_items" class="btn btn-primary btn-sm" value="Tìm sản phẩm">
 							</div>
 						</form>
@@ -380,7 +385,34 @@
 		
 	</footer><!--/Footer-->
 	
-
+	<script>
+		$(document).ready(function(){
+			$('#keywords').keyup(function(){
+				var query = $(this).val();
+				// alert(query);
+				if(query != '')
+				{
+					var _token = $('input[name="_token"]').val();
+					$.ajax({
+						url:"{{ route('autocomplete.fetch') }}",
+						method:"POST",
+						data:{query:query, _token:_token},
+						success:function(data){
+							$('#search_ajax').fadeIn();
+							$('#search_ajax').html(data);
+						}
+					});
+				}
+				else{
+					$('#search_ajax').fadeOut();
+				}
+			});
+		});
+		$(document).on('click','li',function(){
+			$('#keywords').val($(this).text());
+			$('#search_ajax').fadeOut();
+		});
+	</script>
   
     <script src="{{asset('public/frontend/js/jquery.js')}}"></script>
 	<script src="{{asset('public/frontend/js/bootstrap.min.js')}}"></script>

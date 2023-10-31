@@ -11,6 +11,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\MoMoController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +27,7 @@ use App\Http\Controllers\MoMoController;
 Route::get('/', [HomeController::class, 'index']);  // trang index
 Route::get('/trang-chu', [HomeController::class, 'index']);  // trang index
 Route::post('/tim-kiem', [HomeController::class, 'search']);  // trang index
+Route::post('/autocomplete/fetch', [HomeController::class, 'autocomplete_ajax'])->name('autocomplete.fetch');  // trang index
 Route::get('/admin-login', [AdminController::class,'login']); // trang login cho admin
 Route::get('/admin', [AdminController::class,'show_dashboard']); // trang index admin
 Route::post('/admin-dashboard', [AdminController::class,'dashboard']); // trang index admin (yeu cau login truoc)
@@ -62,6 +64,9 @@ Route::get('/admin/inactive-product/{product_id}', [ProductController::class, 'i
 Route::get('/admin/active-product/{product_id}', [ProductController::class, 'active_product']);  // hien thi danh muc
 Route::post('/admin/save-product', [ProductController::class, 'save_product']);  // luu danh muc san pham
 Route::post('/admin/update-product/{product_id}', [ProductController::class, 'update_product']);  // cap nhat (phia xu li) danh muc san pham
+
+// Quan ly don dat hang
+Route::get('/admin/all-order', [OrderController::class, 'all_order']);  // cap nhat (phia xu li) danh muc san pham
 
 // danh mục sản phẩm
 Route::get('/danh-muc-san-pham/{category_id}', [CategoryProduct::class, 'show_category_home']);  // trang danh mục sp theo id sphẩm
