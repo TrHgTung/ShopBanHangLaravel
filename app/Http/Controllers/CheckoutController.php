@@ -140,15 +140,18 @@ class CheckoutController extends Controller
             return redirect()->to("/momo-quickpay-test"); 
         } else if($data['payment_method'] == '2'){
             // echo 'Cash';
-            Cart::destroy();
+            return redirect()->to("/onepay-result"); //
+        } else if($data['payment_method'] == '3'){
+            // echo 'MoMo';
+            return redirect()->to("/momo-result"); // fix
+        }else if($data['payment_method'] == '4'){
+            // echo 'shipping';
+             Cart::destroy();
             $cate_product = DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
             $brand_product = DB::table('tbl_brand_product')->where('brand_status','1')->orderby('brand_id','desc')->get();
     
             return view("pages.checkout.thankyou_cash")->with('category_product' , $cate_product)->with('brand_product' , $brand_product);
         
-        } else if($data['payment_method'] == '3'){
-            // echo 'MoMo';
-            return redirect()->to("/momo-result"); // fix
         }
         else{
             echo 'Vui lòng quay lại và chọn 1 phương thức thanh toán (bắt buộc)';

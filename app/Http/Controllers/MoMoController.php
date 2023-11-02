@@ -89,7 +89,9 @@ class MoMoController extends Controller
             $jsonResult = json_decode($result, true);  // decode json
         
             //Just a example, please check more in there
+            
         return redirect()->to($jsonResult['payUrl']);
+        Cart::destroy();
             // header('Location: ' . $jsonResult['payUrl']);
         // }
     }
@@ -115,7 +117,8 @@ class MoMoController extends Controller
         echo($result);
         $jsonResult = json_decode($result, true);
         if ($jsonResult['payUrl'] != null)
-            header('Location: ' . $jsonResult['payUrl']);
+            return redirect()->to($jsonResult['payUrl']);   
+        // header('Location: ' . $jsonResult['payUrl']);
         return $result;
     }
 
@@ -166,6 +169,9 @@ class MoMoController extends Controller
                 'signature' => $signature);
             $result = $this->quickpay_execPostRequest($endpoint, json_encode($data));
             $jsonResult = json_decode($result, true);  // decode json
+
+            Cart::destroy();
+            // return redirect()->to($jsonResult['payUrl']);
 
         }
     }

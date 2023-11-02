@@ -86,13 +86,16 @@
                     <input type="hidden" name="total_momo" value="{{$total_after}}">
                     <h4><strong>Chọn một hình thức thanh toán*</strong></h4>
                         <span>
-                            <label><input name="payment_option" value="1" type="radio"> Thẻ Ngân hàng Nội địa</label>
+                            <label><input name="payment_option" value="1" type="radio"> Giao thức QuickPay (MoMo)</label>
                         </span>
                         <span>
-                            <label><input name="payment_option" value="2" type="radio"> Trả bằng tiền mặt**</label>
+                            <label><input name="payment_option" value="2" type="radio"> Thẻ ngân hàng nội địa (với ONEPAY)</label>
                         </span>
                         <span>
                             <label><input name="payment_option" value="3" type="radio"> Thẻ ngân hàng nội địa (với MoMo)</label>
+                        </span>
+                        <span>
+                            <label><input name="payment_option" value="4" type="radio"> Trả bằng tiền mặt **</label>
                         </span>
                         
                         <input type="submit" value="Thanh toán & Đặt hàng" name="send_order_place" class="btn btn-primary btn-sm">

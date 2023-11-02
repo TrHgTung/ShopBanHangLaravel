@@ -12,6 +12,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\MoMoController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OnePayController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -96,3 +97,7 @@ Route::get('/product/van-chuyen', [StaticPageController::class, 'van_chuyen']);
 Route::get('/momo-result', [MoMoController::class, 'momo_payment']);
 Route::post('/momo-payment', [MoMoController::class, 'momo_payment']);
 Route::get('/momo-quickpay-test', [MoMoController::class, 'momo_quickpay']);
+
+// OnePay
+Route::get('/onepay-result', [OnePayController::class, 'onepay_payment']);
+Route::post('/onepay-payment', [OnePayController::class, 'onepay_payment']);
