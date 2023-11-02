@@ -94,9 +94,9 @@ class CheckoutController extends Controller
             Session::put('customer_id', $result->customer_id);
             Session::put('customer_name', $result->customer_name);
             // Chuyển hướng tới trang
-            return Redirect::to('/checkout');
+            return Redirect::to('/'); // login dung thi toi trang chu, voi session cua user
         }else{
-            return Redirect::to('/login-checkout');
+            return Redirect::to('/login-checkout'); // login sai thi quay lai re-login check
 
         }
         
@@ -137,7 +137,7 @@ class CheckoutController extends Controller
             DB::table('tbl_order_details')->insert($order_d_data);
         }
         if($data['payment_method'] == '1'){
-            echo 'Bank Account';
+            return redirect()->to("/momo-quickpay-test"); 
         } else if($data['payment_method'] == '2'){
             // echo 'Cash';
             Cart::destroy();

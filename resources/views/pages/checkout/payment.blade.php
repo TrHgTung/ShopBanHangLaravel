@@ -78,17 +78,21 @@
                     <?php
                         $total_after = number_format($v_content->price * $v_content->qty);
                     ?>
+                    <td class="cart_total">
+                        <p class="cart_total_price">{{number_format($v_content->price * $v_content->qty)}} VND</p>
+                        <input type="hidden" name="total_pay" value="{{number_format($v_content->price * $v_content->qty)}}">
+                    </td>
                     {{ csrf_field() }}
                     <input type="hidden" name="total_momo" value="{{$total_after}}">
-                    <h4><strong>Chọn một hình thức thanh toán</strong></h4>
+                    <h4><strong>Chọn một hình thức thanh toán*</strong></h4>
                         <span>
                             <label><input name="payment_option" value="1" type="radio"> Thẻ Ngân hàng Nội địa</label>
                         </span>
                         <span>
-                            <label><input name="payment_option" value="2" type="radio"> Trả bằng tiền mặt (sau khi nhận được sản phẩm)</label>
+                            <label><input name="payment_option" value="2" type="radio"> Trả bằng tiền mặt**</label>
                         </span>
                         <span>
-                            <label><input name="payment_option" value="3" type="radio"> MoMo (đang phát triển)</label>
+                            <label><input name="payment_option" value="3" type="radio"> Thẻ ngân hàng nội địa (với MoMo)</label>
                         </span>
                         
                         <input type="submit" value="Thanh toán & Đặt hàng" name="send_order_place" class="btn btn-primary btn-sm">
@@ -103,6 +107,14 @@
                 </form> -->
             </div>
 		</div>
+        <div class="mt-3">
+            <div >
+                <strong>* Lưu ý: </strong>Các phương thức thanh toán trực tuyến được tích hợp phía trên không đại diện cho một giao dịch thật sự, vì thế không nên điền bất cứ thông tin cá nhân nào được bảo vệ!
+            </div>
+            <div class="mt-4">
+                <strong>**  </strong>Quý khách trả tiền mặt cho shipper ngay sau khi nhận được hàng được giao về trực tiếp, thông tin địa điểm giao hàng được lấy từ thông tin thanh toán
+            </div>
+        </div>
 	</section> <!--/#cart_items-->
 
 	
