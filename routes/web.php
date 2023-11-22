@@ -13,6 +13,7 @@ use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\MoMoController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OnePayController;
+use App\Http\Controllers\PromotionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -101,3 +102,6 @@ Route::get('/momo-quickpay-test', [MoMoController::class, 'momo_quickpay']);
 // OnePay
 Route::get('/onepay-result', [OnePayController::class, 'onepay_payment']);
 Route::post('/onepay-payment', [OnePayController::class, 'onepay_payment']);
+
+// promotion
+Route::get('/promotion', [PromotionController::class, 'index']);

@@ -41,7 +41,7 @@ class OnePayController extends Controller
         // unset($_POST["SubButL"]);
         $vpc_Merchant = 'ONEPAY';
         $vpc_AccessCode = 'D67342C2';
-        $vpc_MerchTxnRef = date ( 'YmdHis' ) . rand ();
+        $vpc_MerchTxnRef = time();
         $vpc_OrderInfo = 'JSECURETEST01';
         $vpc_Amount = '100' *100;
         // $vpc_Amount = $_POST['total_momo'];
