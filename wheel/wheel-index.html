@@ -1,56 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vòng quay may mắn</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap">
+  <meta charset="UTF-8">
+  <title>NEKO Store - Vòng quay Gương thần May mắn</title>
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* background-image: url("{{asset('public/frontend/images/promotion_Dec12.jpg')}}"); */
+  background-image: url("test.jpg");
+  background-repeat: no-repeat;
+}
+
+.wheel {
+  position: relative;
+}
+
+.inner-wheel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  overflow: hidden;
+  position: relative;
+}
+
+.section {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: transparent;
+  color: transparent;
+}
+
+.section:nth-child(odd) {
+  background-color: transparent;
+}
+
+.spin-button {
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+  </style>
 </head>
-<style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-    }
-    body{
-        height: 100vh;
-        background: linear-gradient(135deg, #c3a3f1, #6414e9);
-    }
-    .wrapper{
-        width: 90%;
-        max-width: 34.37em;
-        max-height: 90vh;
-        background-color: #ffffff;
-        position: absolute;transform: translate(-50%,-50%);
-        top: 50%;
-        left: 50%;
-        padding: 3em;
-        border-radius: 1em;
-        box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
-    }
-    .container{
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    #wheel{
-        max-height: inherit;
-        width: inherit;top: 0;
-        padding: 0;
-    }
-</style>
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <canvas id="wheel"></canvas>
+
+<div class="container">
+    <div class="wheel">
+        <div class="inner-wheel">
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Chúc bạn may mắn lần sau</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 20%</div>
+          <div class="section">Bạn nhận được: Coupon Giảm 20%</div>
+          <div class="section">Tuyệt vời! Bạn nhận được: Coupon Giảm 50%</div>
+          <div class="section">Tuyệt vời! Bạn nhận được: Coupon Giảm 100%</div>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
-    <script>
-        const wheel = document.getElementById("wheel");
-        const spinBtn = document.getElementById()
-    </script>
+        <div class="spin-button" onclick="spinWheel()">QUAY</div>
+      </div>
+    <div >
+        <p>Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
+        <p>Hãy sử dụng mã này khi nhập trong giỏ hàng</p>
+      </div>
+</div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+const spinButton = document.querySelector('.spin-button');
+
+let spinning = false;
+
+function spinWheel() {
+  if (spinning) return;
+  spinning = true;
+
+  const randomDegree = Math.floor(Math.random() * 360) + 3600;
+
+  sections.forEach((section, index) => {
+    const degree = index * (360 / sections.length);
+    section.style.transform = `rotate(${randomDegree}deg)`;
+  });
+
+  setTimeout(() => {
+    spinning = false;
+    const chosenSection = Math.floor((360 - (randomDegree % 360)) / (360 / sections.length));
+    alert(`${sections[chosenSection].textContent}`);
+  }, 5000);
+}
+
+  </script>
 </body>
 </html>
