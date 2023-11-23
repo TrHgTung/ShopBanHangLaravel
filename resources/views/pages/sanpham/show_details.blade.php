@@ -37,6 +37,8 @@
 											<i class="fa fa-shopping-cart"></i>
 											Thêm vào giỏ
 										</button>
+										<label for="">Nhập mã coupon giảm giá: </label>
+										<input type="text" name="coupon" id="coupon" size="20" maxlength="20">
 									</form>
 								</span>
 								<p><b>Mô tả ngắn gọn:</b> {{$value->product_desc}}</p>
@@ -67,18 +69,26 @@
 									<li class=""><a href="#" id="hienthithoigian"><i class="fa fa-clock-o"></i>12:41 PM</a></li>
 									<!-- <li><a href="#"><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li> -->
 								</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 									<p><b>Write Your Review</b></p>
 									
 									<form action="#">
 										<span>
-											<input type="text" placeholder="Your Name"/>
-											<input type="email" placeholder="Email Address"/>
+											<select id="cars">
+												<option value="volvo">Quá tuyệt vời @^_^@</option>
+												<option value="saab">Tốt ^o^</option>
+												<option value="opel">Bình thường -.-</option>
+												<option value="audi">Tệ @.@</option>
+												<option value="audi">Quá tệ khiến tôi trả lại hàng !$@#$%#^</option>
+											</select>
 										</span>
+										<div class="mt-4">
+											<label for="" >Viết đánh giá cảm nhận của bạn</label>
+										</div>
+									
 										<textarea name="" ></textarea>
-										<b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
+										
 										<button type="button" class="btn btn-default pull-right">
-											Submit
+											Đánh giá sản phẩm
 										</button>
 									</form>
 								</div>

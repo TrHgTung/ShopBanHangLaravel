@@ -72,15 +72,28 @@
 #result{
   color:white;
 }
-
+.waitBtn{
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 0px;
+  border-radius: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
   </style>
 </head>
 <body>
 
 <div class="container">
   <div >
-    <p id="text">Mã nhận thưởng cá nhân của bạn: <strong><p id="result"></p></strong></p>
-    <p id="text">Hãy sử dụng mã này khi nhập trong giỏ hàng</p>
+    <div class="lead">
+      <p id="result"></p>
+    </div>
+    <p id="text">Hãy sử dụng mã này và nhập trong giỏ hàng để nhận ưu đãi</p>
     <p id="hidden">Bản quyền thuộc về Neko Store</p>
   </div>
 
@@ -104,7 +117,7 @@
           <div class="section">Tuyệt vời! Bạn nhận được: Coupon Giảm 50%</div>
           <div class="section">Tuyệt vời! Bạn nhận được: Coupon Giảm 100%</div>
         </div>
-        <div class="spin-button" onclick="spinWheel(); generateRandomNumber()"><h1><strong>&nbsp; BỐC &nbsp;THĂM</strong></h1></div>
+        <div class="spin-button" id="randomBtn" onclick="spinWheel(); generateRandomNumber()"><h1><strong>&nbsp; BỐC &nbsp;THĂM</strong></h1></div>
       </div>
       <div>
         <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
@@ -114,7 +127,7 @@
         <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
         <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
         <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
-        <p id="hidden">Hãy sử dụng mã này khi nhập trong giỏ hàng</p>
+        <p id="hidden">g</p>
       </div>
 </div>
 
@@ -148,8 +161,14 @@ function generateRandomNumber() {
   const max = 999999; // Maximum value
 
   const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  const buttonBtn = document.getElementById('randomBtn')
 
-  document.getElementById('result').innerText = `COUPON${randomNumber}`;
+  buttonBtn.innerHTML = '<button class="waitBtn" onclick="alertMe();">Vui lòng chờ..</button>'
+  document.getElementById('result').innerText = `Mã nhận thưởng cá nhân của bạn: COUPON${randomNumber}`;
+}
+
+function alertMe(){
+  alertify.alert('Bạn đã thực hiện lượt chơi của ngày hôm nay!')
 }
 
   </script>

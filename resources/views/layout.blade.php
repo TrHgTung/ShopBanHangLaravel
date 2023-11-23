@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | E-Shopper</title>
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="{{asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
@@ -13,6 +14,7 @@
     <link href="{{asset('public/frontend/css/animate.css')}}" rel="stylesheet">
 	<link href="{{asset('public/frontend/css/main.css')}}" rel="stylesheet">
 	<link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
+	<link href="{{asset('public/frontend/css/chatbox.css')}}" rel="stylesheet">
 	<script src="{{('public/frontend/js/jquery.min.js')}}"></script>
 	<script src="{{('public/frontend/js/jquery.js')}}"></script>
 	<script src="{{('public/frontend/js/jquery.min.map')}}"></script>
@@ -28,10 +30,57 @@
 </head><!--/head-->
 
 <body>
-	<?php
-		// echo Session::get('customer_id').' and '.Session::get('shipping_id');
-		// echo Session::get('shipping_id');
-	?>
+				<div class="container">
+					<div class="chatbox-wrapper">
+						<div class="chatbox-toggle">
+							<i class='bx bx-message-dots'></i>
+						</div>
+						<div class="chatbox-message-wrapper">
+							<div class="chatbox-message-header">
+								<div class="chatbox-message-profile">
+									<img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" alt="" class="chatbox-message-image">
+									<div>
+										<h4 class="chatbox-message-name">NEKO STORE</h4>
+										<p class="chatbox-message-status">Đang online</p>
+									</div>
+								</div>
+								<div class="chatbox-message-dropdown">
+									<i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+									<ul class="chatbox-message-dropdown-menu">
+										<li>
+											<a href="#">Search</a>
+										</li>
+										<li>
+											<a href="#">Report</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="chatbox-message-content">
+								<h4 class="chatbox-message-no-message">Chưa có tin nhắn gì hết! </h4>
+								<p class="">(Hãy nhắn kèm với họ tên/username/e-mail để được giải quyết vấn đề của riêng bạn nha)</p>
+								<!-- <div class="chatbox-message-item sent">
+									<span class="chatbox-message-item-text">
+										Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+									</span>
+									<span class="chatbox-message-item-time">08:30</span>
+								</div>
+								<div class="chatbox-message-item received">
+									<span class="chatbox-message-item-text">
+										Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+									</span>
+									<span class="chatbox-message-item-time">08:30</span>
+								</div> -->
+							</div>
+							<div class="chatbox-message-bottom">
+								<form action="#" class="chatbox-message-form">
+									<textarea rows="1" placeholder="Nhắn gì đó với Neko Store..." class="chatbox-message-input"></textarea>
+									<button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -130,7 +179,7 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
-								<li ><a href="{{URL::to('/khuyen-mai')}}">Khuyến mãi</a></li>
+								<li ><a href="{{URL::to('/promotion')}}">Khuyến mãi</a></li>
 								<li><a href="{{URL::to('/show-cart')}}">Giỏ hàng</a></li>
 								<li><a href="contact-us.html">Liên hệ</a></li>
 							</ul>
@@ -259,114 +308,23 @@
 		<div class="footer-top">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-2">
+					<div class="col-sm-4">
 						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<h2><span>NEKO</span>-STORE</h2>
+							<h5>Tự hào là đơn vị kinh doanh sản phẩm sách uy tín, chất lượng.</h5>
 						</div>
 					</div>
-					<div class="col-sm-7">
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="{{('public/frontend/images/iframe1.png')}}" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="{{('public/frontend/images/iframe2.png')}}" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
+					<div class="col-sm-4">
+						<div class="companyinfo">
+							<h2><span>NEKO</span>-HOTLINE</h2>
+							<h4>0909-091-223</h4>
 						</div>
 					</div>
-					<div class="col-sm-3">
-						<div class="address">
-							<img src="images/home/map.png" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-widget">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Service</h2>
-							<ul class="nav nav-pills nav-stacked">
-								
-						
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Order Status</a></li>
-								<li><a href="#">Change Location</a></li>
-								<li><a href="#">FAQ’s</a></li>
-	
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Quock Shop</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">T-Shirt</a></li>
-								<li><a href="#">Mens</a></li>
-								<li><a href="#">Womens</a></li>
-								<li><a href="#">Gift Cards</a></li>
-								<li><a href="#">Shoes</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Policies</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privecy Policy</a></li>
-								<li><a href="#">Refund Policy</a></li>
-								<li><a href="#">Billing System</a></li>
-								<li><a href="#">Ticket System</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Company Information</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">Store Location</a></li>
-								<li><a href="#">Affillate Program</a></li>
-								<li><a href="#">Copyright</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3 col-sm-offset-1">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<form action="#" class="searchform">
-								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-								<p>Get the most recent updates from <br />our site and be updated your self...</p>
-							</form>
+					<div class="col-sm-4">
+						<div class="companyinfo">
+							<h2><span>NEKO</span>-TEAM</h2>
+							<p class="lead">Chịu trách nhiệm kỹ thuật</p>
+							<h5>Hoàng Tùng - Anh Quân - Trịnh Thành - Quốc Đạt</h5>
 						</div>
 					</div>
 					
@@ -374,17 +332,34 @@
 			</div>
 		</div>
 		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+			
+					<div class="col-sm-9 col-sm-offset-1">
+						<div class="single-widget">
+							<img src="{{('public/frontend/images/map.jpg')}}" width="50%" height="50%" alt="" />
+						</div>
+						<div class="single-widget">
+							<p><strong>Địa chỉ văn phòng kỹ thuật:</strong> 280 Đ. An Dương Vương - Quận 5 - TP.HCM</p>
+						</div>
+					</div>
+
+	
+				</div>
+			</div>
+		</div>
+		
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+					<p class="pull-left">Copyright © 2023 NEKO Store Inc.</p>
 				</div>
 			</div>
 		</div>
 		
 	</footer><!--/Footer-->
-	
+	<!-- <script src="{{('public/frontend/js/chatbox.js')}}"></script> -->
 	<script>
 		$(document).ready(function(){
 			$('#keywords').keyup(function(){
@@ -412,6 +387,119 @@
 			$('#keywords').val($(this).text());
 			$('#search_ajax').fadeOut();
 		});
+
+		// MESSAGE INPUT
+const textarea = document.querySelector('.chatbox-message-input')
+const chatboxForm = document.querySelector('.chatbox-message-form')
+
+textarea.addEventListener('input', function () {
+	let line = textarea.value.split('\n').length
+
+	if(textarea.rows < 6 || line < 6) {
+		textarea.rows = line
+	}
+
+	if(textarea.rows > 1) {
+		chatboxForm.style.alignItems = 'flex-end'
+	} else {
+		chatboxForm.style.alignItems = 'center'
+	}
+})
+
+
+
+// TOGGLE CHATBOX
+const chatboxToggle = document.querySelector('.chatbox-toggle')
+const chatboxMessage = document.querySelector('.chatbox-message-wrapper')
+
+chatboxToggle.addEventListener('click', function () {
+	chatboxMessage.classList.toggle('show')
+})
+
+
+
+// DROPDOWN TOGGLE
+const dropdownToggle = document.querySelector('.chatbox-message-dropdown-toggle')
+const dropdownMenu = document.querySelector('.chatbox-message-dropdown-menu')
+
+dropdownToggle.addEventListener('click', function () {
+	dropdownMenu.classList.toggle('show')
+})
+
+document.addEventListener('click', function (e) {
+	if(!e.target.matches('.chatbox-message-dropdown, .chatbox-message-dropdown *')) {
+		dropdownMenu.classList.remove('show')
+	}
+})
+
+
+
+
+
+
+
+// CHATBOX MESSAGE
+const chatboxMessageWrapper = document.querySelector('.chatbox-message-content')
+const chatboxNoMessage = document.querySelector('.chatbox-message-no-message')
+
+chatboxForm.addEventListener('submit', function (e) {
+	e.preventDefault()
+
+	if(isValid(textarea.value)) {
+		writeMessage()
+		setTimeout(autoReply, 1000)
+	}
+})
+
+
+
+function addZero(num) {
+	return num < 10 ? '0'+num : num
+}
+
+function writeMessage() {
+	const today = new Date()
+	let message = `
+		<div class="chatbox-message-item sent">
+			<span class="chatbox-message-item-text">
+				${textarea.value.trim().replace(/\n/g, '<br>\n')}
+			</span>
+			<span class="chatbox-message-item-time">${addZero(today.getHours())}:${addZero(today.getMinutes())}</span>
+		</div>
+	`
+	chatboxMessageWrapper.insertAdjacentHTML('beforeend', message)
+	chatboxForm.style.alignItems = 'center'
+	textarea.rows = 1
+	textarea.focus()
+	textarea.value = ''
+	chatboxNoMessage.style.display = 'none'
+	scrollBottom()
+}
+
+function autoReply() {
+	const today = new Date()
+	let message = `
+		<div class="chatbox-message-item received">
+			<span class="chatbox-message-item-text">
+				Cảm ơn bạn đã chat với chúng tôi! Neko Store sẽ giải đáp thắc mắc của bạn sớm nhất có thể nha!
+			</span>
+			<span class="chatbox-message-item-time">${addZero(today.getHours())}:${addZero(today.getMinutes())}</span>
+		</div>
+	`
+	chatboxMessageWrapper.insertAdjacentHTML('beforeend', message)
+	scrollBottom()
+}
+
+function scrollBottom() {
+	chatboxMessageWrapper.scrollTo(0, chatboxMessageWrapper.scrollHeight)
+}
+
+function isValid(value) {
+	let text = value.replace(/\n/g, '')
+	text = text.replace(/\s/g, '')
+
+	return text.length > 0
+}
 	</script>
   
     <script src="{{asset('public/frontend/js/jquery.js')}}"></script>
