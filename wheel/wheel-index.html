@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NEKO Store - Vòng quay Gương thần May mắn</title>
+  <title>NEKO Store - Gương thần May mắn</title>
+  <script src="alertify.js"></script>
+  <script src="alertify.min.js"></script>
+  <link rel="stylesheet" href="alertify.css">
+  <link rel="stylesheet" href="alertify.min.css">
   <style>
     body {
   display: flex;
@@ -12,8 +16,10 @@
   margin: 0;
   font-family: Arial, sans-serif;
   /* background-image: url("{{asset('public/frontend/images/promotion_Dec12.jpg')}}"); */
-  background-image: url("test.jpg");
+  background-image: url("bg.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .wheel {
@@ -24,7 +30,7 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 2px solid #333;
+  border: 2px solid transparent;
   overflow: hidden;
   position: relative;
 }
@@ -57,11 +63,27 @@
   transform: translateX(-50%);
 }
 
+#hidden{
+  color: transparent;
+}
+#text{
+  color:white;
+}
+#result{
+  color:white;
+}
+
   </style>
 </head>
 <body>
 
 <div class="container">
+  <div >
+    <p id="text">Mã nhận thưởng cá nhân của bạn: <strong><p id="result"></p></strong></p>
+    <p id="text">Hãy sử dụng mã này khi nhập trong giỏ hàng</p>
+    <p id="hidden">Bản quyền thuộc về Neko Store</p>
+  </div>
+
     <div class="wheel">
         <div class="inner-wheel">
           <div class="section">Chúc bạn may mắn lần sau</div>
@@ -78,23 +100,21 @@
           <div class="section">Chúc bạn may mắn lần sau</div>
           <div class="section">Chúc bạn may mắn lần sau</div>
           <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
-          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
-          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
-          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
-          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
-          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
-          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
-          <div class="section">Bạn nhận được: Coupon Giảm 10%</div>
-          <div class="section">Bạn nhận được: Coupon Giảm 20%</div>
           <div class="section">Bạn nhận được: Coupon Giảm 20%</div>
           <div class="section">Tuyệt vời! Bạn nhận được: Coupon Giảm 50%</div>
           <div class="section">Tuyệt vời! Bạn nhận được: Coupon Giảm 100%</div>
         </div>
-        <div class="spin-button" onclick="spinWheel()">QUAY</div>
+        <div class="spin-button" onclick="spinWheel(); generateRandomNumber()"><h1><strong>&nbsp; BỐC &nbsp;THĂM</strong></h1></div>
       </div>
-    <div >
-        <p>Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
-        <p>Hãy sử dụng mã này khi nhập trong giỏ hàng</p>
+      <div>
+        <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
+        <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
+        <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
+        <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
+        <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
+        <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
+        <p id="hidden">Mã nhận thưởng cá nhân: <strong>#12345</strong></p>
+        <p id="hidden">Hãy sử dụng mã này khi nhập trong giỏ hàng</p>
       </div>
 </div>
 
@@ -118,8 +138,18 @@ function spinWheel() {
   setTimeout(() => {
     spinning = false;
     const chosenSection = Math.floor((360 - (randomDegree % 360)) / (360 / sections.length));
-    alert(`${sections[chosenSection].textContent}`);
+    alertify.alert(`${sections[chosenSection].textContent}`);
   }, 5000);
+}
+
+
+function generateRandomNumber() {
+  const min = 100000; // Minimum value
+  const max = 999999; // Maximum value
+
+  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+  document.getElementById('result').innerText = `COUPON${randomNumber}`;
 }
 
   </script>
