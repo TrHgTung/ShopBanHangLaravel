@@ -181,7 +181,7 @@
 								<li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
 								<li ><a href="{{URL::to('/promotion')}}">Khuyến mãi</a></li>
 								<li><a href="{{URL::to('/show-cart')}}">Giỏ hàng</a></li>
-								<li><a href="contact-us.html">Liên hệ</a></li>
+								<li><a href="{{('wheel/wheel-index.html')}}" target="_blank">Thử vận may</a></li>
 							</ul>
 						</div>
 					</div>

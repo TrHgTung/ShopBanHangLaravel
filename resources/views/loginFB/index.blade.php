@@ -1,0 +1,1161 @@
+<html>
+<head>
+	<title>
+		Login with Facebook
+	</title>
+	<style>
+        
+/* login page design */
+body
+{ 	
+	background: #e3e6f0;
+	height:700px;
+}
+
+.header
+{
+	position:fixed;
+	width:100%;
+	height:90px;
+	background:#3d5b99;
+	top:0;
+	left:0;
+	color:white;
+	z-index:7;
+	font-family:verdana;
+}
+.headerx
+{
+	position:fixed;
+	width:100%;
+	height:90px;
+	top:0;
+	left:0;
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+}
+#img1
+{
+	left:178px;
+	top:25px;
+	height:50px;
+	width:100px;
+}
+#form1
+{
+	left:750px;
+	height:60px;
+	width:180px;
+	top:20px;
+	font-size:12px;
+}
+#form2
+{
+	left:940px;
+	height:60px;
+	width:250px;
+	top:20px;
+	font-size:12px;
+}
+#submit1
+{
+	left:1125px;
+	top:35px;
+	height:25px;
+	width:50px;
+}
+#button1
+{
+	background:#5b7bc0;
+	color:white;
+	width:50px;
+	height:22px;
+	cursor:pointer;
+}
+.bodyx
+{
+	position:absolute;
+	left:0px;
+	top:90px;
+	width:100%;
+	height:645px;
+}
+#intro1
+{
+	top:20px;
+	left:178px;
+	font-family:verdana;
+	font-size:20px;
+	color:#142170;
+	height:75px;
+	width:550px;
+}
+#intro2
+{
+	top:20px;
+	left:750px;
+	font-family:verdana;
+	font-size:30px;
+	color:#142170;
+	width:500px;
+	height:75px;
+}
+#img2
+{
+	top:130px;
+	left:178px;
+	height:195px;
+	width:537px;
+}
+#intro3
+{
+	top:70px;
+	left:750px;
+	font-family:verdana;
+	font-size:18px;
+	color:#142170;
+	height:50px;
+	width:300px;
+}
+#form3
+{
+	top:120px;
+	left:750px;
+	font-family:verdana;
+	font-size:20px;
+	color:#142170;
+	width:450px;
+	height:495px;
+}
+#namebox
+{	
+	width:200px;
+	height:40px;
+	border-radius:5px 5px 5px 5px;
+	background:white;
+	padding:10px;
+	font-size:18px;
+	margin-top:8px;
+	border-width: 1px;
+	border-style:solid;
+	border-color: gray;
+}
+#mailbox
+{
+	width:408px;
+	height:40px;
+	border-radius:5px 5px 5px 5px;
+	background:white;
+	padding:10px;
+	font-size:18px;
+	margin-top:8px;
+	border-width: 1px;
+	border-style:solid;
+	border-color: gray;
+}
+#intro4
+{
+	font-family:verdana;
+	font-size:12px;
+	color:gray;
+	
+}
+#button2
+{
+	width:250px;
+	height:40px;
+	left:750px;
+	top:625px;
+	background:green;
+	font-family:verdana;
+	font-size:18px;
+	color:white;
+	border-radius:5px 5px 5px 5px;
+	border-width: 1px;
+	border-style:solid;
+	border-color: gray;
+	cursor:pointer;
+	outline:none;
+}
+
+/* homepage design */
+
+.header0001
+{
+	position:fixed;
+	width:100%;
+	height:60px;
+	top:0;
+	left:0;
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+
+}
+.header1
+{
+	position:fixed;
+	width:100%;
+	height:60px;
+	background:#3d5b99;
+	top:0;
+	left:0;
+	color:white;
+	z-index:7;
+}
+
+#img3
+{
+	left:100px;
+	height:50px;
+	top:5px;
+}
+
+#searcharea
+{
+	top:17px;
+	left:240px;
+	height:40px;
+}
+
+#searchbox
+{
+	width:500px;
+	height:26px;
+	background:white;
+	padding:5px;
+	outline:none;
+	border-radius: 5px 5px 5px 5px;
+}
+a
+{
+	color:white;
+	text-decoration:none; /* to prevent underlin*/
+}
+#profilearea
+{
+	top:15px;
+	left:780px;
+	height:40px;
+}
+#profpic
+{
+	height:30px;
+	width:30px;
+}
+#profilearea1
+{
+	top:22px;
+	left:830px;
+	height:20px;
+	font-size:15px;
+	font-family:verdana;
+}
+
+#profilearea3
+{
+	top:10px;
+	left:900px;
+	height:30px;
+	font-size:30px;
+	font-family:verdana;
+}
+#profilearea4
+{
+	top:22px;
+	left:920px;
+	height:20px;
+	font-size:15px;
+	font-family:verdana;
+}
+#extrabut
+{
+	top:15px;
+	left:1015px;
+	height:30px;
+	width:120px;
+}
+#logout
+{
+	top:20px;
+	height:30px;
+	left:1215px;
+}
+#button1
+{
+	background:#5b7bc0;
+	color:white;
+	width:50px;
+	height:22px;
+	cursor:pointer;
+}
+.bodyn
+{
+	top:70px;
+	left:30px;
+	position:absolute;
+	width:200px;
+	height:740px;
+	font-family:verdana;
+}
+#side1
+{
+	top:0;
+	left:10px;
+	width:180px;
+	height:40px;
+	font-size:20px;
+	color:#868383;
+}
+
+#side3
+{
+	top:60px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side4
+{
+	top:85px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side5
+{
+	top:110px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side6
+{
+	top:145px;
+	left:10px;
+	width:180px;
+	height:30px;
+	font-size:20px;
+	color:#868383;
+	padding-top:5px;
+}
+#side7
+{
+	top:175px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side8
+{
+	top:200px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side9
+{
+	top:225px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side10
+{
+	top:250px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side11
+{
+	top:285px;
+	left:10px;
+	width:180px;
+	height:30px;
+	font-size:20px;
+	color:#868383;
+	padding-top:5px;
+}
+#side12
+{
+	top:315px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side13
+{
+	top:340px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side14
+{
+	top:375px;
+	left:10px;
+	width:180px;
+	height:30px;
+	font-size:20px;
+	color:#868383;
+	padding-top:5px;
+}
+#side15
+{
+	top:405px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side16
+{
+	top:430px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side17
+{
+	top:455px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side18
+{
+	top:490px;
+	left:10px;
+	width:180px;
+	height:30px;
+	font-size:20px;
+	color:#868383;
+	padding-top:5px;
+}
+#side19
+{
+	top:520px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side20
+{
+	top:545px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side21
+{
+	top:580px;
+	left:10px;
+	width:180px;
+	height:30px;
+	font-size:20px;
+	color:#868383;
+	padding-top:5px;
+}
+#side22
+{
+	top:610px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+#side23
+{
+	top:645px;
+	left:10px;
+	width:180px;
+	height:30px;
+	font-size:20px;
+	color:#868383;
+	padding-top:5px;
+}
+#side24
+{
+	top:675px;
+	left:10px;
+	width:160px;
+	height:25px;
+	font-size:15px;
+	color:#363030;
+	padding-top:5px;
+	padding-left:20px;
+}
+
+#side1:hover
+{
+	background:#e9f0f2;
+}
+#side3:hover
+{
+	background:#e9f0f2;
+}
+#side4:hover
+{
+	background:#e9f0f2;
+}
+#side5:hover
+{
+	background:#e9f0f2;
+}
+#side6:hover
+{
+	background:#e9f0f2;
+}#side7:hover
+{
+	background:#e9f0f2;
+}
+#side8:hover
+{
+	background:#e9f0f2;
+}
+#side9:hover
+{
+	background:#e9f0f2;
+}
+#side10:hover
+{
+	background:#e9f0f2;
+}
+#side11:hover
+{
+	background:#e9f0f2;
+}
+#side12:hover
+{
+	background:#e9f0f2;
+}
+#side13:hover
+{
+	background:#e9f0f2;
+}
+#side14:hover
+{
+	background:#e9f0f2;
+}
+#side15:hover
+{
+	background:#e9f0f2;
+}
+#side16:hover
+{
+	background:#e9f0f2;
+}
+#side17:hover
+{
+	background:#e9f0f2;
+}
+#side18:hover
+{
+	background:#e9f0f2;
+}
+#side19:hover
+{
+	background:#e9f0f2;
+}
+#side20:hover
+{
+	background:#e9f0f2;
+}
+#side21:hover
+{
+	background:#e9f0f2;
+}
+#side22:hover
+{
+	background:#e9f0f2;
+}
+#side23:hover
+{
+	background:#e9f0f2;
+}
+#side24:hover
+{
+	background:#e9f0f2;
+}
+.post00
+{
+	top:70px;
+	left:240px;
+	position:absolute;
+	width:600px;
+	height:210px;
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+}
+.post
+{
+	top:70px;
+	left:240px;
+	position:absolute;
+	width:600px;
+	height:210px;
+	border-radius:3px/3px;
+}
+#column-1
+{
+	left:0px;
+	top:0px;
+	background:white;
+	width:580px;
+	height:200px;
+	border-radius:3px/3px;
+	font-size:15px;
+	font-family:verdana;
+	color:#1b6192;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+}
+
+#postbox
+{
+	height:105px;
+	outline:none;
+	border:white;
+	background:#e9f0f2;
+	width:580px;
+	color:black;
+}
+#postposu
+{
+	left:60px;
+	top:173px;
+	width:100px;
+	height:30px;
+}
+#buttonupload
+{
+	width:90px;
+}
+#postpos1
+{
+	left:160px;
+	top:173px;
+}
+#postpos
+{
+	left:450px;
+	top:170px;
+	width:85px;
+	height:30px;
+}
+#buttonpost
+{
+	width:85px;
+	height:30px;
+	border-radius:4px/4px;
+	background:#3d5b99;
+	font-size:15px;
+	outline:none;
+	color:white;
+}
+.post10
+{
+	top:290px;
+	left:240px;
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+	position:absolute;
+	width:580px;
+	height:600px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+}
+.post1
+{
+	top:290px;
+	left:240px;
+	position:absolute;
+	background:white;
+	width:580px;
+	height:600px;
+	border-radius:3px/3px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+}
+p6
+{
+	color:#1b6192;
+	font-family:verdana;
+	font-size:15px;
+	word-spacing:10px;
+}
+p1
+{	
+	color:#1b6192;
+	font-family:verdana;
+	font-size:15px;
+}
+p2{
+	color:#868383;
+	font-family:verdana;
+	font-size:15px;
+}
+#post2text
+{
+	left:40px;
+	top:0px;
+	padding-top:10px;
+	height:40px;
+	width:400px;
+}
+p3{
+	color:#1b6192;
+	font-family:verdana;
+	font-size:15px;
+	font-weight:bold;
+}
+p4
+{
+	color:#868383;
+	font-family:verdana;
+	font-size:10px;
+}
+
+#commentprof2
+{
+	top:560px;
+	left:0px;
+	width:30px;
+	height:30px;
+}
+#commentboxpos2
+{
+	top:560px;
+	left:40px;
+	width:540px;
+	height:30px;
+}
+#commentbox
+{
+	width:540px;
+	height:30px;
+}
+.post20
+{
+	top:910px;
+	left:240px;
+	background:white;
+	position:absolute;
+	width:580px;
+	height:600px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	border-radius:3px/3px;
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+}
+.post2
+{
+	top:910px;
+	left:240px;
+	background:white;
+	position:absolute;
+	width:580px;
+	height:600px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	border-radius:3px/3px;
+}
+
+.sideboxxx
+{
+	top:70px;
+	left:850px;
+	width:220px;
+	height:570px;
+	position:absolute;
+	font-family:verdana;
+	color:#363030;
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+	font-size:15px;
+}
+#sidebox1
+{
+	top:0;
+	left:0;
+	width:200px;
+	height:550px;
+	background:white;
+	border-radius:3px/3px;
+	padding:10px;
+}
+.sidebox
+{
+	top:70px;
+	left:850px;
+	width:220px;
+	height:570px;
+	position:absolute;
+	font-family:verdana;
+	color:#363030;
+	font-size:15px;
+}
+#sideboxx1
+{
+	left:0px;
+	width:180px;
+	height:20px;
+	font-size:20px;
+	color:#868383;
+}
+#sideboxx2
+{
+	left:0px;
+	width:180px;
+	height:20px;
+	font-size:20px;
+	color:#868383;
+}
+#sideboxx3
+{
+	left:0px;
+	width:180px;
+	height:20px;
+	font-size:20px;
+	color:#868383;
+}
+#sideboxx4
+{
+	left:0px;
+	width:180px;
+	height:20px;
+	font-size:20px;
+	color:#868383;
+}
+#post1pos
+{
+	left:80px;
+	top:500px;
+	width:100px;
+	height:30px;
+}
+#buttonpost1
+{
+	width:100px;
+	height:30px;
+	font-size:15px;
+	border-radius:4px/4px;
+	color:white;
+	background:#3d5b99;
+	outline:none;
+}
+.sideboxxxx2
+{
+	top:650px;
+	left:850px;
+	width:220px;
+	height:460px;
+	position:absolute;
+	font-family:verdana;
+	color:#363030;
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+	font-size:15px;
+}
+.sideboxxx2
+{
+	top:650px;
+	left:850px;
+	width:220px;
+	height:460px;
+	position:absolute;
+	font-family:verdana;
+	color:#363030;
+	font-size:15px;
+}
+#sidebox2
+{
+	top:0px;
+	left:0;
+	width:200px;
+	height:440px;
+	background:white;
+	border-radius:3px/3px;
+	padding:10px;
+}
+#sideboxx21
+{
+	left:0px;
+	width:180px;
+	height:20px;
+	font-size:20px;
+	color:#868383;
+}
+#sideboxx22
+{
+	left:0px;
+	width:180px;
+	height:20px;
+	font-size:20px;
+	color:#868383;
+}
+#sideboxx23
+{
+	left:0px;
+	width:180px;
+	height:20px;
+	font-size:20px;
+	color:#868383;
+}
+.chat-sidebarx
+{
+    width: 200px;
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    position: fixed;
+    height: 605px;
+    right: 0px;
+    top: 60px;
+	background:#e9f0f2;
+}
+.chat-sidebar
+{
+    width: 200px;
+    position: fixed;
+    height: 605px;
+    right: 0px;
+    top: 60px;
+	background:#e9f0f2;
+}		
+#chatnamebox
+{
+	width:150px;
+	height:30px;
+	top:65px;
+	color:black;
+	font-size:16px;
+	padding-top:8px;
+	padding-left:50px;
+}
+#chatnameboxp1
+{
+	width:30px;
+	height:30px;
+	left:5px;
+	position:absolute;
+	top:8px;
+}	
+#chatnameboxp2
+{
+	width:30px;
+	height:30px;
+	left:5px;
+	position:absolute;
+	top:48px;
+}
+#chatnamebox1
+{
+	width:150px;
+	height:30px;
+	top:105px;
+	color:black;
+	padding-top:8px;
+	padding-left:50px;
+}  
+#chatnamebox2
+{
+	width:150px;
+	height:30px;
+	top:145px;
+	color:black;
+	padding-top:8px;
+	padding-left:50px;
+}
+#chatnamebox:hover
+{
+	background:#e1e5e6; 
+}
+#chatnamebox1:hover
+{
+	background:#e1e5e6; 
+}
+#chatnamebox2:hover
+{
+	background:#e1e5e6; 
+}
+
+/* setting page design */
+
+
+#infopos
+{
+	left:150px;
+	top:45px;
+}
+#infopos2
+{
+	left:500px;
+	top:45px;
+}
+#infopos3
+{
+	left:150px;
+	top:63px;
+}
+#infopos4
+{
+	left:500px;
+	top:63px;
+}
+#infopos5
+{
+	left:150px;
+	top:81px;
+}
+#infopos6
+{
+	left:500px;
+	top:81px;
+}
+#infopos7
+{
+	left:500px;
+	top:99px;
+}
+    </style>
+
+</head>
+<body >
+	<div class="headerx">
+	</div>
+	
+	<div class="header">
+		<div id="img1" class="header" />
+			<a href="https://www.facebook.com/">
+			<img src="{{asset('public/frontend/images/Fb/logo.png')}}"  />
+			</a>
+		</div>
+
+		<form method="post" action="{{URL::to('/fb-auth/login-customer')}}">
+			{{ csrf_field() }}
+			<div id="form1" class="header">
+				Email or Phone
+				<br>
+				<input placeholder="Email" type="mail"  name="email_account" id="mailinput" />
+				<br>
+				<input type="checkbox" id="login" />
+				Keep me logged in
+			</div>
+			<div id="form2" class="header">
+				Password
+				<br>
+				<input placeholder="Password" type="password" name="password_account" id="passwordinput" />
+				<br>
+				<a href="https://www.facebook.com/">Forgotten your password?</a>
+			</div>
+			<div id="submit1" class="header">
+				<input type="submit" id="button1" value="login" />
+			</div>
+		</form>
+
+	</div>
+
+	<div class="bodyx">
+		<div id="intro1" class="bodyx">
+			Facebook helps you connect and share with the
+			<br>
+			people in your life.
+		</div>
+		<div id="intro2" class="bodyx">
+			Create an account
+		</div>
+		<div id="img2" class="bodyx">
+			<img src="{{asset('public/frontend/images/Fb/Faceback_map.PNG')}}"/>
+		</div>
+		<div id="intro3" class="bodyx">
+			It's free and always will be.
+		</div>
+		<form >
+			<div id="form3" class="bodyx">
+				<input placeholder="First Name" type="text" id="namebox" name="name1" />
+				<input placeholder="Last Name" type="text" id="namebox"/>
+				<br>
+				<input placeholder="Email" type="text" id="mailbox"/>
+				<br>
+				<input placeholder="Re-enter email" type="text" id="mailbox"/>
+				<br>
+				<input placeholder="Password" type="password" id="mailbox"/>
+				<br>
+				<input type="date" id="namebox"/>
+				<br>
+				<br>
+				<input type="radio" name="sex" value="male"/>
+				Male  
+				<input type="radio" name="sex" value="female"/>
+				Female
+				<br>
+				<br>
+				<p id="intro4">
+					By clicking Create an account, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.
+				</p>
+				<input type="submit" id="button2" value="Create an account"/>
+		</form>
+		<br>
+		<hr>
+		<p id="intro4">
+			Create a page for a celebrity, band or business.</div>
+		</p>
+	</div>
+</body>
+</html>

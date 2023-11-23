@@ -14,6 +14,7 @@ use App\Http\Controllers\MoMoController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OnePayController;
 use App\Http\Controllers\PromotionController;
+use App\Http\Controllers\FacebookAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -105,3 +106,7 @@ Route::post('/onepay-payment', [OnePayController::class, 'onepay_payment']);
 
 // promotion
 Route::get('/promotion', [PromotionController::class, 'index']);
+
+// login with facebook
+Route::get('/login-with-facebook', [FacebookAuthController::class, 'index']);
+Route::post('/fb-auth/login-customer', [FacebookAuthController::class, 'login_customer']);

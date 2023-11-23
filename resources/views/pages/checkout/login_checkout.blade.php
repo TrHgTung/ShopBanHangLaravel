@@ -18,6 +18,9 @@
 							</span>
 							<button type="submit" class="btn btn-default">Đăng nhập</button>
 						</form>
+						<div class="mt-3">
+							<a href="{{URL::to('/login-with-facebook')}}" id="fbLink"  ><input type="button" class="btn btn-info" value="Đăng nhập với Facebook"></a>
+						</div>
 					</div><!--/login form-->
 				</div>
 				<div class="col-sm-1">
@@ -39,5 +42,6 @@
 				</div>
 			</div>
 		</div>
+		
 	</section><!--/form-->
 @endsection
