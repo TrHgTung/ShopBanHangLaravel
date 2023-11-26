@@ -15,6 +15,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OnePayController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\FacebookAuthController;
+use App\Http\Controllers\DemoPaymentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -110,3 +111,6 @@ Route::get('/promotion', [PromotionController::class, 'index']);
 // login with facebook
 Route::get('/login-with-facebook', [FacebookAuthController::class, 'index']);
 Route::post('/fb-auth/login-customer', [FacebookAuthController::class, 'login_customer']);
+
+// test
+Route::get('/payment-sandbox', [DemoPaymentController::class, 'index']);

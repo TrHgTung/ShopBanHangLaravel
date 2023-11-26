@@ -1,0 +1,79 @@
+/* Các quy tắc CSS cho ô vuông */
+.square-container {
+    display: flex;
+    width: 500px; /* Đặt kích thước cho ô vuông (có thể điều chỉnh theo nhu cầu) */
+}
+
+/* Phần bên trái chiếm 1/3 và có màu hồng */
+.left-side {
+    background-color: #B01F72;
+    flex: 1; /* Chiếm 1/3 của ô vuông */
+    color: white; /* Màu chữ trắng */
+}
+
+/* Phần bên phải chiếm 2/3 và có màu trắng */
+.right-side {
+    background-color: white;
+    flex: 2; /* Chiếm 2/3 của ô vuông */
+    padding: 10px; /* Để tạo khoảng trắng xung quanh nội dung */
+    text-align: center;
+}
+
+.left-noidung{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+p#thongtin{
+    padding-left: 20px;
+    margin-top: 1px;
+}
+
+p img {
+    width: 10%;
+    height: auto; /* Giữ tỷ lệ khung hình ảnh */
+}
+
+p#noidung{
+    margin-bottom: 1px;
+}
+
+hr {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+p#back{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Canh giữa hai hình ảnh */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    width: 300px; /*Đặt chiều rộng của div (có thể điều chỉnh theo nhu cầu) */
+    /*margin: 20px; /* Đặt margin cho khoảng cách với các phần tử khác (có thể điều chỉnh theo nhu cầu) */
+}
+
+/* Các hình ảnh */
+.image-container img {
+    max-width: 20%; /* Đặt chiều rộng tối đa của mỗi hình ảnh (để tránh bị chồng lên nhau) */
+}
+
+img#qrcode{
+    max-width: 130px;
+    height: auto;
+}
+
+h4 img {
+    max-width: 15px; /* Hình ảnh sẽ không vượt quá chiều rộng của phần tử cha (h4) */
+    height: auto; /* Giữ cho tỷ lệ chiều cao tự động điều chỉnh */
+}
+
+.red-border {
+    border: 2px solid red; /* Độ dày là 2px, màu đỏ */
+    width: 100%;
+    padding: 10px; /* Khoảng trắng bên trong khung viền */
+    display: inline-block; /* Để không chiếm toàn bộ chiều rộng của trang */
+}
