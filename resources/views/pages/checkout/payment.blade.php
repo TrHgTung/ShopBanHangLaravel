@@ -86,11 +86,11 @@
                     <input type="hidden" name="total_momo" value="{{$total_after}}">
                     <h4><strong>Chọn một hình thức thanh toán*</strong></h4>
                         <span>
-                            <label><input name="payment_option" value="1" type="radio"> Giao thức QuickPay (MoMo)</label>
+                            <label><input name="payment_option" value="1" type="radio"> Giao thức QR Code (MoMo)</label>
                         </span>
-                        <span>
+                        <!-- <span>
                             <label><input name="payment_option" value="2" type="radio"> Thẻ ngân hàng nội địa (với ONEPAY)</label>
-                        </span>
+                        </span> -->
                         <span>
                             <label><input name="payment_option" value="3" type="radio"> Thẻ ngân hàng nội địa (với MoMo)</label>
                         </span>
@@ -101,7 +101,7 @@
                         <input type="submit" value="Thanh toán & Đặt hàng" name="send_order_place" class="btn btn-primary btn-sm">
                 </form>
                 <?php
-                    print($total_after);
+                    // print($total_after);
                 ?>
                 <!-- <form action="{{URL::to('/order-place')}}" method="POST">
                     {{ csrf_field() }}

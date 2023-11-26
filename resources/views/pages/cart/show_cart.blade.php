@@ -81,10 +81,10 @@
 				<div class="col-sm-6">
 					<div class="total_area">
 						<ul>
-							<li>Tạm tính <span>{{number_format((float)Cart::total())}} VND</span></li>
-							<li>Thuế <span>{{number_format((float)Cart::tax())}} VND</span></li>
-							<li>Phí vận chuyển <span>Free</span></li>
-							<li>Phải trả <span>{{number_format((float)Cart::total())}} VND</span></li>
+							<li>Tạm tính <span>{{number_format((float)Cart::total())}} 000 VND</span></li>
+							<li>Thuế (15%) <span>{{number_format((float)Cart::tax())}} 000 VND</span></li>
+							<li>Phí vận chuyển <span>Miễn phí</span></li>
+							<li>Phải trả <span>{{number_format((float)Cart::total())}} 000 VND</span></li>
 						</ul>
 						<?php
 									$customer_id = Session::get('customer_id');
