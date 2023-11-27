@@ -18,8 +18,12 @@
 						<div class="product-overlay">
 							<div class="overlay-content">
 								<h2>{{$product->product_name}}</h2>
+								<?php
+									$fake_price = number_format(100000 + ($product->product_price));
+									echo '<p class="text-danger"><del>Giá cũ: '.$fake_price.' VND</del></p>';
+								?>
 								<p>{{number_format($product->product_price)}} VND</p>
-								<a href="{{URL::to('/')}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+								<a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem sản phẩm</a>
 							</div>
 						</div>
 					</div>

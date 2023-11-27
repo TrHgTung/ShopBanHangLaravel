@@ -30,6 +30,10 @@
 								<span>
 									<form action="{{URL::to('/save-cart')}}" method="post">
 										{{ csrf_field() }}
+										<?php
+											$fake_price = number_format(100000 + ($value->product_price));
+											echo '<p class="text-danger"><del>Giá cũ: '.$fake_price.' VND</del></p>';
+										?>
 										<span>{{number_format($value->product_price)}} VND</span>
 										x  <input name="qty" type="number" min="1" value="1" />
 										<input name="productid_hidden" type="hidden"  value="{{$value->product_id}}" />
