@@ -2,6 +2,9 @@
 @section('content')
 
 <div class="features_items">
+	<a href="{{URL::to('/trang-chu')}}"><input type="button" class="btn btn-default" value="Sách mới ra lò"></a>
+	<a href="{{URL::to('/trang-chu')}}"><input type="button" class="btn btn-default" value="Bán chạy nhất"></a>
+	<a href="{{URL::to('/pre-release-products')}}"><input type="button" class="btn btn-default" value="Sắp phát hành"></a>
 
 	<!-- !!! -->
 	<h2 class="title text-center">Sản phẩm mới</h2>
