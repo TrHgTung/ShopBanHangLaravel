@@ -86,7 +86,7 @@
                     <input type="hidden" name="total_momo" value="{{$total_after}}">
                     <h4><strong>Chọn một hình thức thanh toán*</strong></h4>
                         <span>
-                            <label><input name="payment_option" value="1" type="radio"> Giao thức QR Code (MoMo)</label>
+                            <label><input name="payment_option" value="1" type="radio"> Giao thức QR Code (với MoMo)</label>
                         </span>
                         <!-- <span>
                             <label><input name="payment_option" value="2" type="radio"> Thẻ ngân hàng nội địa (với ONEPAY)</label>

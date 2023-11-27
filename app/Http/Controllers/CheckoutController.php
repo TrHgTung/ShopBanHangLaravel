@@ -137,13 +137,14 @@ class CheckoutController extends Controller
             DB::table('tbl_order_details')->insert($order_d_data);
         }
         if($data['payment_method'] == '1'){
-            return redirect()->to("/momo-quickpay-test"); 
+            return redirect()->to("/payment-sandbox");  // custom QR generator payment method
         } else if($data['payment_method'] == '2'){
             // echo 'Cash';
-            return redirect()->to("/onepay-result"); //
+            return redirect()->to("/onepay-result"); // cancel
+
         } else if($data['payment_method'] == '3'){
             // echo 'MoMo';
-            return redirect()->to("/momo-result"); // fix
+            return redirect()->to("/momo-result");
         }else if($data['payment_method'] == '4'){
             // echo 'shipping';
              Cart::destroy();

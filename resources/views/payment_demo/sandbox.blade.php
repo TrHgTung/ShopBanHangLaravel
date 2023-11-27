@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('public/frontend /css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('public/frontend/css/style.css')}}">
     <script src="{{asset('public/frontend/js/countdown.js')}}"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="{{asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -37,7 +37,7 @@
                     <p id="thongtin">$price</p>
                     <hr>
                     <p id="noidung"><strong>Khách hàng thanh toán</strong></p>
-                    <p id="thongtin">$customer</p>
+                    <p id="thongtin">Hoang Tung</p>
                     <hr>
                     <p id="noidung"><strong>Đơn hàng</strong></p>
                     <p id="thongtin">$orderId</p>

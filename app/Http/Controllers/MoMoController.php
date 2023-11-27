@@ -170,7 +170,7 @@ class MoMoController extends Controller
             $result = $this->quickpay_execPostRequest($endpoint, json_encode($data));
             $jsonResult = json_decode($result, true);  // decode json
 
-            Cart::destroy();
+            // Cart::destroy();
             // return redirect()->to($jsonResult['payUrl']);
 
         }
