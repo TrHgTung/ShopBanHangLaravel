@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Session;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 session_start();
@@ -18,6 +19,7 @@ class PreReleaseProductController extends Controller
 
         $all_product = DB::table('tbl_product')->where('product_status','1')->orderby('product_id','desc')->limit(4)->get();
         // them
+        Cart::destroy();
         return view('pre_release.index');
     }
 }
