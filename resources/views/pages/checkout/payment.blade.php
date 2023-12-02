@@ -265,7 +265,7 @@ function autoReply() {
 	let message = `
 		<div class="chatbox-message-item received">
 			<span class="chatbox-message-item-text">
-				Cảm ơn bạn đã chat với chúng tôi! Neko Store sẽ giải đáp thắc mắc của bạn sớm nhất có thể nha!
+				Cảm ơn bạn đã chat với chúng tôi! Neko Store sẽ giải đáp thắc mắc của bạn sớm nhất có thể nha!  Hoặc liên hệ <a href="https://www.facebook.com/nguyentuanhung12345" target="_blank">địa chỉ Facebook này</a> để được giải đáp trong vòng thời gian ngắn hơn
 			</span>
 			<span class="chatbox-message-item-time">${addZero(today.getHours())}:${addZero(today.getMinutes())}</span>
 		</div>

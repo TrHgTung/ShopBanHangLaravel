@@ -127,9 +127,10 @@
 								</ul>
 									<p><b>Write Your Review</b></p>
 									
-									<form action="#">
+									<form action="{{URL::to('/comment')}}" method="POST">
+										{{ csrf_field() }}
 										<span>
-											<select id="cars">
+											<select id="cars" name="rating">
 												<option value="5">Quá tuyệt vời @^_^@</option>
 												<option value="4">Tốt ^o^</option>
 												<option value="3">Bình thường -.-</option>
@@ -141,9 +142,9 @@
 											<label for="" >Viết đánh giá cảm nhận của bạn</label>
 										</div>
 									
-										<textarea name="" ></textarea>
+										<textarea name="content" ></textarea>
 										
-										<button type="button" class="btn btn-default pull-right">
+										<button type="submit" class="btn btn-default pull-right">
 											Đánh giá sản phẩm
 										</button>
 									</form>

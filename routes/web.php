@@ -17,6 +17,7 @@ use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\FacebookAuthController;
 use App\Http\Controllers\DemoPaymentController;
 use App\Http\Controllers\PreReleaseProductController;
+use App\Http\Controllers\CommentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -118,3 +119,6 @@ Route::get('/payment-sandbox', [DemoPaymentController::class, 'index']);
 
 // Pre-Release Products
 Route::get('/pre-release-products', [PreReleaseProductController::class, 'index']);
+
+// comment
+Route::post('/comment', [CommentController::class, 'index']);
