@@ -21,6 +21,10 @@
                                     <input type="text" name="product_price" class="form-control" id="exampleInputEmail1" value="{{$pro->product_price}}">
                                 </div>
                                 <div class="form-group">
+                                    <label for="exampleInputEmail1">Quà tặng kèm</label>
+                                    <input type="text" name="product_gift" class="form-control" id="exampleInputEmail1" value="{{$pro->product_gift}}">
+                                </div>
+                                <div class="form-group">
                                     <label for="exampleInputEmail1">Hình ảnh sản phẩm</label>
                                     <img src="{{URL::to('public/upload/product/'.$pro->product_image)}}" height="100" width="100" alt="" srcset="">
                                     <input type="file" name="product_image" class="form-control" id="exampleInputEmail1" placeholder="">

@@ -45,6 +45,7 @@
             </th>
             <th>Tên sản phẩm</th>
             <th>Giá bán</th>
+            <th>Quà tặng kèm</th>
             <th>Hình ảnh sản phẩm</th>
             <th>Danh mục sản phẩm</th>
             <th>Thương hiệu sản phẩm</th>
@@ -58,6 +59,7 @@
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
             <td>{{ $pro->product_name }}</td>
             <td>{{ $pro->product_price }}</td>
+            <td>{{ $pro->product_gift }}</td>
             <td><img src="{{URL::to('public/upload/product/'.$pro->product_image)}}" height="100" width="100"></td>
             <td>{{ $pro->category_name }}</td>
             <td>{{ $pro->brand_name }}</td>

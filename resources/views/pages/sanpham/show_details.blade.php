@@ -41,10 +41,10 @@
 											<i class="fa fa-shopping-cart"></i>
 											Thêm vào giỏ
 										</button>
-										<label for="">Nhập mã coupon giảm giá: </label>
-										<input type="text" name="coupon" id="coupon" size="20" maxlength="20">
 									</form>
 								</span>
+								<label for="">Nhập mã coupon giảm giá: </label>
+								<input type="text" name="coupon" id="coupon" size="20" maxlength="20">
 								<p><b>Mô tả ngắn gọn:</b> {{$value->product_desc}}</p>
 								<p><b>Tình trạng:</b> Mới / Còn hàng</p>
 								<p><b>Đơn vị cung cấp</b>: {{$value->brand_name}}</p>

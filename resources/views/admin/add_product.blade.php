@@ -20,6 +20,10 @@
                                     <input type="text" name="product_price" class="form-control" id="exampleInputEmail1" placeholder="VD: 1000">
                                 </div>
                                 <div class="form-group">
+                                    <label for="exampleInputEmail1">Quà tặng kèm</label>
+                                    <input type="text" name="product_gift" class="form-control" id="exampleInputEmail1" placeholder="">
+                                </div>
+                                <div class="form-group">
                                     <label for="exampleInputEmail1">Hình ảnh sản phẩm</label>
                                     <input type="file" name="product_image" class="form-control" id="exampleInputEmail1" placeholder="">
                                 </div>
