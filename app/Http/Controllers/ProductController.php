@@ -187,5 +187,12 @@ class ProductController extends Controller
         // return view('pages.sanpham.show_details')->with('category_product' , $cate_product)->with('brand_product' , $brand_product);
         // return view('pages.sanpham.show_details',compact('cate_product','brand_product','detail_product'));
     }
+
+    // public function show_comment($product_id){
+    //     $comment = DB::table('tbl_comment')->orderby('id','desc')->get();
+
+    //     return view('pages.sanpham.show_details')->with('comment', $comment);
+        
+    // }
     
 }

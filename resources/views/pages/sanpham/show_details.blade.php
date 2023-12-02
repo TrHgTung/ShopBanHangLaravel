@@ -125,7 +125,7 @@
 									<li class=""><a href="#" id="hienthithoigian"><i class="fa fa-clock-o"></i>12:41 PM</a></li>
 									<!-- <li><a href="#"><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li> -->
 								</ul>
-									<p><b>Write Your Review</b></p>
+									<p><b>Nếu cần thiết, hãy để lại phản hồi ẩn danh cho chúng tôi biết về tình trạng sản phẩm</b></p>
 									
 									<form action="{{URL::to('/comment')}}" method="POST">
 										{{ csrf_field() }}
@@ -139,14 +139,14 @@
 											</select>
 										</span>
 										<div class="mt-4">
-											<label for="" >Viết đánh giá cảm nhận của bạn</label>
+											<label for="" >Viết nội dung phản hồi (feedback) của bạn</label>
 										</div>
 									
 										<textarea name="content" ></textarea>
 										
-										<button type="submit" class="btn btn-default pull-right">
-											Đánh giá sản phẩm
-										</button>
+											<button type="submit" class="btn btn-default pull-right">
+												Gửi phản hồi
+											</button>
 									</form>
 								</div>
 								<div>
