@@ -48,6 +48,7 @@
 								<p><b>Mô tả ngắn gọn:</b> {{$value->product_desc}}</p>
 								<p><b>Tình trạng:</b> Mới / Còn hàng</p>
 								<p><b>Đơn vị cung cấp</b>: {{$value->brand_name}}</p>
+								<p><b>Tặng kèm*</b>: {{$value->product_gift}}</p>
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
 						</div>
@@ -78,11 +79,11 @@
 									<form action="#">
 										<span>
 											<select id="cars">
-												<option value="volvo">Quá tuyệt vời @^_^@</option>
-												<option value="saab">Tốt ^o^</option>
-												<option value="opel">Bình thường -.-</option>
-												<option value="audi">Tệ @.@</option>
-												<option value="audi">Quá tệ khiến tôi trả lại hàng !$@#$%#^</option>
+												<option value="5">Quá tuyệt vời @^_^@</option>
+												<option value="4">Tốt ^o^</option>
+												<option value="3">Bình thường -.-</option>
+												<option value="2">Tệ @.@</option>
+												<option value="1">Quá tệ khiến tôi trả lại hàng !$@#$%#^</option>
 											</select>
 										</span>
 										<div class="mt-4">
@@ -95,6 +96,9 @@
 											Đánh giá sản phẩm
 										</button>
 									</form>
+								</div>
+								<div>
+									<p><strong>*: </strong>Quà tặng dành cho khách hàng không tính vào phí vận chuyển</p>
 								</div>
 							</div>
 							<script>

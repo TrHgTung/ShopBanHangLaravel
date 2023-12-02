@@ -9,16 +9,16 @@
 
 ## Cách sử dụng:
 
-Cài đặt Composer ; XAMPP ; mở terminal tại vị trí thư mục của source và chạy lần lượt 2 câu lệnh sau
-- Cập nhật các gói thư viện Laravel: `composer update`
-- Tạo key truy cập ứng dụng Laravel: `php artisan key:generate`
-- Khởi động XAMPP (Run as administrator/Global active) và chạy 2 dịch vụ Apache và MySQL
-- Mặc định source chạy ở `127.0.0.1:80`
-- Khởi tạo cơ sở dữ liệu: Tạo 1 db tên `elaravel` (có thể config trong file .env bằng cách thay đổi giá trị `DB_DATABASE`)
-- Sau đó chạy đoạn lệnh `php artisan migrate` để chạy các file seed ra CSDL. Tài liệu Laravel migration DB: <a>https://laravel.com/docs/10.x/migrations</a>
-- Tùng đẹp trai =))
+Cài đặt Composer ; XAMPP (đi chung với phiên bản PHP 8.1 tối thiểu - vì đồ án sử dụng Laravel 10 phải kẹp chung với bản PHP 8.1.x) ; mở terminal tại vị trí thư mục của source và chạy lần lượt 2 câu lệnh sau
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   Cập nhật các gói thư viện Laravel: `composer update`
+-   Copy file .env.example thành 1 file khác (.env.example - Copy) và đổi tên file đã paste thành: `.env`. Sau đó, thay đổi các giá trị như tên cơ sở dữ liệu (chạy với MySQL) : dòng 14 tức giá trị `DB_DATABASE`.
+-   Tạo key truy cập ứng dụng Laravel: `php artisan key:generate`
+-   Khởi động XAMPP (Run as administrator/Global active) và chạy 2 dịch vụ Apache và MySQL
+-   Mặc định source chạy ở `127.0.0.1:80`
+-   Khởi tạo cơ sở dữ liệu: Tạo 1 db tên `elaravel` trong MySQL (có thể dùng bất kỳ cái tên nào để đặt cho CSDL, miễn tên CSDL trong MySQL trùng với config trong file .env bằng cách thay đổi giá trị `DB_DATABASE`)
+-   (Không áp dụng dòng này do không đủ file migration) <del>Sau đó chạy đoạn lệnh `php artisan migrate` để chạy các file seed ra CSDL. Tài liệu Laravel migration DB: <a>https://laravel.com/docs/10.x/migrations</a></del>
+-   Vào CSDL: import file SQL đã backup, file này nằm trong thư mục db_backup/elaravel.sql của repository.
 
 ## Learning Laravel
 
@@ -28,37 +28,9 @@ You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
