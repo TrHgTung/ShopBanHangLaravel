@@ -216,10 +216,10 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<h1><span>Neko</span>-Store</h1>
+									<h2>Hãy để Neko Store mang đến trải nghiệm đọc sách cho bạn</h2>
+									<p>Với phương châm "Đổi mới vì khách hàng", Neko Store luôn lấy khách hàng làm trọng tâm để xây dựng, phát triển và luôn luôn đổi mới cửa hàng. Cố gắng trên đà trở thành Top cửa hàng trực tuyến thị trường Việt Nam!</p>
+									<a href="{{URL::to('/promotion')}}"><button type="button" class="btn btn-default get">Xem khuyến mãi</button></a>
 								</div>
 								<div class="col-sm-6">
 									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
@@ -228,10 +228,11 @@
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>100% Responsive Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<h1><span>Neko</span>-Store</h1>
+									<h2>Dự án website kinh doanh sách của Nhóm 2 - Mô hình B2C</h2>
+									<p>Với phương châm "Đổi mới vì khách hàng", Neko Store luôn lấy khách hàng làm trọng tâm để xây dựng, phát triển và luôn luôn đổi mới cửa hàng. Cố gắng trên đà trở thành Top cửa hàng trực tuyến số 1 Việt Nam!</p>
+									<a href="{{URL::to('/promotion')}}"><button type="button" class="btn btn-default get">Xem khuyến mãi</button></a>
+
 								</div>
 								<div class="col-sm-6">
 									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
@@ -241,10 +242,11 @@
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free Ecommerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<h1><span>Neko</span>-Store</h1>
+									<h2>Dự án của Nhóm 2</h2>
+									<p>Luôn luôn lắng nghe và luôn luôn đổi mới! Neko Store luôn cải thiện và tích hợp nhiều tính năng vào website của mình nhằm phục vụ tất cả khách hàng của mình!</p>
+									<a href="{{URL::to('/promotion')}}"><button type="button" class="btn btn-default get">Xem khuyến mãi</button></a>
+
 								</div>
 								<div class="col-sm-6">
 									<img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />

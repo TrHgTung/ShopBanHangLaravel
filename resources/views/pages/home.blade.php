@@ -5,6 +5,7 @@
 	<a href="{{URL::to('/trang-chu')}}"><input type="button" class="btn btn-default" value="Sách mới ra lò"></a>
 	<a href="{{URL::to('/trang-chu')}}"><input type="button" class="btn btn-default" value="Bán chạy nhất"></a>
 	<a href="{{URL::to('/pre-release-products')}}"><input type="button" class="btn btn-default" value="Sắp phát hành"></a>
+	<a href="{{('wheel/wheel-index.html')}}" target="_blank"><input type="button" class="btn btn-default" value="Mini Game"></a>
 
 	<!-- !!! -->
 	<h2 class="title text-center">Sản phẩm mới</h2>
