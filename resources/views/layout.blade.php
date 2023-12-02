@@ -30,7 +30,8 @@
 </head><!--/head-->
 
 <body>
-				<div class="container">
+	<!-- CHATBOX -->
+				<!-- <div class="container">
 					<div class="chatbox-wrapper">
 						<div class="chatbox-toggle">
 							<i class='bx bx-message-dots'></i>
@@ -59,18 +60,7 @@
 							<div class="chatbox-message-content">
 								<h4 class="chatbox-message-no-message">Chưa có tin nhắn gì hết! </h4>
 								<p class="">(Hãy nhắn kèm với họ tên/username/e-mail để được giải quyết vấn đề của riêng bạn nha)</p>
-								<!-- <div class="chatbox-message-item sent">
-									<span class="chatbox-message-item-text">
-										Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
-									</span>
-									<span class="chatbox-message-item-time">08:30</span>
-								</div>
-								<div class="chatbox-message-item received">
-									<span class="chatbox-message-item-text">
-										Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
-									</span>
-									<span class="chatbox-message-item-time">08:30</span>
-								</div> -->
+								
 							</div>
 							<div class="chatbox-message-bottom">
 								<form action="#" class="chatbox-message-form">
@@ -80,7 +70,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
+				<!-- end of CHATBOX -->
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">

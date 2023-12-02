@@ -136,12 +136,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <!-- <li><a href="grids.html">Promotions</a></li> -->
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="login.html">
                         <i class="fa fa-user"></i>
                         <span>New Admin</span>
                     </a>
-                </li>
+                </li> -->
             </ul>            </div>
         <!-- sidebar menu end-->
     </div>
