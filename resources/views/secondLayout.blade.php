@@ -113,40 +113,7 @@
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-user"></i> Xin chào, <?php $customer_id = Session::get('customer_name'); echo $customer_id; ?></a></li>
 								<li><a href="{{URL::to('/')}}"><i class="fa fa-star"></i> Thịnh hành</a></li>
-								<?php
-									$customer_id = Session::get('customer_id');
-									$shipping_id = Session::get('shipping_id');
-									// ham check session user
-									if($customer_id != NULL && $shipping_id == NULL){ // da login nhung chua nhap thong tin ship
-								?>
-									<li><a href="{{URL::to('/checkout')}}"><i class="fa fa-lock"></i> K.Tra Thanh Toán</a></li>
-								<?php 
-									}
-									else if($customer_id != NULL && $shipping_id != NULL){ // da authen day du
-								?>
-									<li><a href="{{URL::to('/payment')}}"><i class="fa fa-lock"></i> Thanh toán</a></li>
-								<?php
-									} else{ // chua authen gi het
-								?>
-									<!-- <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Thanh toán</a></li> -->
-								<?php
-									}
-								?>
-								<li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
-								<?php
-									$customer_id = Session::get('customer_id');
-									// ham check session user
-									if($customer_id != NULL){
-								?>
-									<li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i> Đăng xuất</a></li>
-								<?php 
-									}
-									else{
-								?>
-									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Đăng nhập</a></li>
-								<?php
-									}
-								?>
+								
 								
 							</ul>
 						</div>
@@ -173,7 +140,6 @@
 								<li ><a href="{{URL::to('/promotion')}}">Khuyến mãi</a></li>
 								<li><a href="{{URL::to('/show-cart')}}">Giỏ hàng</a></li>
 								<li><a href="{{('wheel/wheel-index.html')}}" target="_blank">Thử vận may</a></li>
-								<li><a href="{{URL::to('/mail')}}" target="_blank">Feedback (e-mail)</a></li>
 							</ul>
 						</div>
 					</div>
@@ -266,33 +232,33 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>Danh mục sản phẩm</h2>
+						<h2>NekoStore</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-							@foreach($category_product as $key => $cate)
+							
 								<div class="panel panel-default">
 									<div class="panel-heading">
-										<h4 class="panel-title"><a href="{{URL::to('/danh-muc-san-pham/'.$cate->category_id)}}">{{$cate->category_name}}</a></h4>
+										
 									</div>
 								</div>
-							@endforeach
+							
 						</div><!--/category-products-->
 
-						<h2>Thương hiệu</h2>
+						
 						<div class="panel-group category-products" id="accordian">
-							@foreach($brand_product as $key => $brand)
+							
 								<div class="panel panel-default">
 									<div class="panel-heading">
-										<h4 class="panel-title"><a href="{{URL::to('/thuong-hieu-san-pham/'.$brand->brand_id)}}">{{$brand->brand_name}}</a></h4>
+										<h4 class="panel-title"><a href="#"></a></h4>
 									</div>
 								</div>
-							@endforeach
+							
 						</div>
 						
 					</div>
 				</div>
 				
 				<div class="col-sm-9 padding-right">
-					@yield('content')		
+					@yield('mailcontent')		
 				</div>
 			</div>
 		</div>

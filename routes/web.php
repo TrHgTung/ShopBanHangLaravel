@@ -18,6 +18,7 @@ use App\Http\Controllers\FacebookAuthController;
 use App\Http\Controllers\DemoPaymentController;
 use App\Http\Controllers\PreReleaseProductController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\SendMailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -122,3 +123,7 @@ Route::get('/pre-release-products', [PreReleaseProductController::class, 'index'
 
 // comment
 Route::post('/comment', [CommentController::class, 'index']);
+
+// phpmailer
+Route::get('/mail', [SendMailController::class, 'index']);
+Route::post('/send-mail', [SendMailController::class, 'sendmail']);
