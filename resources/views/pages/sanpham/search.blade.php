@@ -12,7 +12,7 @@
 									<img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" alt="" class="chatbox-message-image">
 									<div>
 										<h4 class="chatbox-message-name">NEKO STORE</h4>
-										<p class="chatbox-message-status">Đang online</p>
+										<p class="chatbox-message-status">Sẽ trả lời bạn sau ít phút</p>
 									</div>
 								</div>
 								<div class="chatbox-message-dropdown">

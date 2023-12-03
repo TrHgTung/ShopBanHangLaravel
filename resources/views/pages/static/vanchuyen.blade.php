@@ -6,10 +6,10 @@
     <div class="card">
         <div class="row d-flex justify-content-between px-3 top">
             <div class="d-flex">
-                <h5>Mã đơn hàng: <span class="text-primary font-weight-bold">#{query_shipping_id_from_db}</span></h5>
+                <h5><span class="text-primary font-weight-bold">Neko Store</span> luôn là đơn vị kinh doanh hoàn toàn uy tín, chất lượng, lấy khách hàng làm trọng tâm,</br> luôn định hướng đổi mới, tích hợp tính năng nhằm cải thiện trải nghiệm người dùng!</h5>
             </div>
             <div class="d-flex flex-column text-sm-right">
-                <p class="mb-0">Dự kiến tới nơi: <span>01/12/19</span></p>
+                <p class="mb-0">Dự kiến tới nơi: <span>trước ngày 31/12/2023</span></p>
                 <!-- <p>USPS <span class="font-weight-bold">234094567242423422898</span></p> -->
             </div>
         </div>

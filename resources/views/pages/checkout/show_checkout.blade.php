@@ -18,7 +18,7 @@
 			<div class="shopper-informations">
 				<div class="row">
 
-					<div class="col-sm-5 clearfix">
+					<div class="col-sm-8 clearfix">
 						<div class="bill-to">
 							<p>Hãy cung cấp chính xác các thông tin sau cho chúng tôi</p>
 							<div class="form-one">
@@ -56,18 +56,18 @@
 									<textarea name="recipients_address" placeholder="Địa chỉ người nhận thay (để trống thì vẫn gửi về địa chỉ của bạn)" row="8"></textarea>
 									<small><b>Cũng như số điện thoại người nhận thay: </b></small>
 									<input type="text" name="recipients_phone" placeholder="Số điện thoại người nhận thay">
-									<input type="submit" class="btn btn-primary" value="Thanh toán trực tuyến" >
-									<a href="#">Thanh toán bằng tiền mặt sau khi nhận hàng trực tiếp</a>
+									<input type="submit" class="btn btn-primary" value="Đi đến thanh toán" >
+									<!-- <a href="#">Thanh toán bằng tiền mặt sau khi nhận hàng trực tiếp</a> -->
 								</form>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<!-- <div class="col-sm-4">
 						<div class="order-message">
 							<p>Mã khuyến mãi</p>
 							<textarea name="message"  placeholder="Nhập mã khuyến mãi của bạn" rows="8"></textarea>
 						</div>	
-					</div>					
+					</div>					 -->
 				</div>
 			</div>
 			<div class="review-payment">

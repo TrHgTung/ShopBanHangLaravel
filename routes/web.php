@@ -127,3 +127,4 @@ Route::post('/comment', [CommentController::class, 'index']);
 // phpmailer
 Route::get('/mail', [SendMailController::class, 'index']);
 Route::post('/send-mail', [SendMailController::class, 'sendmail']);
+Route::post('/auto-send-mail', [SendMailController::class, 'autosendmail']);

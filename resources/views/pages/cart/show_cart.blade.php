@@ -11,7 +11,7 @@
 									<img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" alt="" class="chatbox-message-image">
 									<div>
 										<h4 class="chatbox-message-name">NEKO STORE</h4>
-										<p class="chatbox-message-status">Đang online</p>
+										<p class="chatbox-message-status">Sẽ trả lời bạn sau ít phút</p>
 									</div>
 								</div>
 								<div class="chatbox-message-dropdown">
@@ -120,12 +120,12 @@
 		<div class="container">
 			<div class="heading">
 				<h3>Kiểm tra thông tin hóa đơn</h3>
-				<p>Hãy kiểm tra lại thông tin hóa đơn. Nếu bạn muốn chúng tôi xuất hóa đơn điện tử, hãy nhập địa chỉ e-mail của bạn, 
+				<!-- <p>Hãy kiểm tra lại thông tin hóa đơn. Nếu bạn muốn chúng tôi xuất hóa đơn điện tử, hãy nhập địa chỉ e-mail của bạn, 
                     <br>chúng tôi sẽ gửi hóa đơn đến địa chỉ này.</p>
                 <form action="#" method="post" >
                     <label for="">E-mail: </label>
                     <input type="e-mail" >
-                </form>
+                </form> -->
 			</div>
 			
 				<div class="col-sm-6">

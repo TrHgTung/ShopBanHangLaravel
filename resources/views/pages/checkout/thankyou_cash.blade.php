@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.115.4">
-    <title>Cover Template · Bootstrap v5.3</title>
+    <title>Neko Store · Chân thành cảm ơn bạn</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -163,7 +163,7 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">{tên-shop}</h3>
+      <h3 class="float-md-start mb-0">Neko Store</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{{URL::to('/product/van-chuyen')}}">Kiểm tra tình trạng vận chuyển</a>
         
@@ -177,6 +177,10 @@
     <p class="lead">
       <a href="{{URL::to('/')}}" class="btn btn-lg btn-light fw-bold border-white bg-white">Về lại trang chủ</a>
     </p>
+    <form action="{{URL::to('/auto-send-mail')}}" method="post">
+      {{ csrf_field() }}
+    <a href="#"><button class="btn btn-secondary">Hãy gửi e-mail thông báo cho tôi</button></a>
+    </form>
   </main>
 
   <footer class="mt-auto text-white-50">
