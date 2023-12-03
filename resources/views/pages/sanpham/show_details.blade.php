@@ -99,6 +99,7 @@
 								<p><b>Mô tả ngắn gọn:</b> {{$value->product_desc}}</p>
 								<p><b>Tình trạng:</b> Mới / Còn hàng</p>
 								<p><b>Đơn vị cung cấp</b>: {{$value->brand_name}}</p>
+								<p><b>Bảo hành tiêu chuẩn</b>: 1 đổi 1 trong vòng 90 ngày nếu có lỗi từ chính sản phẩm</p>
 								<p><b>Tặng kèm*</b>: {{$value->product_gift}}</p>
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
