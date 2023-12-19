@@ -7,26 +7,23 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Cách sử dụng:
+# ĐỒ ÁN CUỐI KỲ THƯƠNG MẠI ĐIỆN TỬ - NEKO
 
-Cài đặt Composer ; XAMPP (đi chung với phiên bản PHP 8.1 tối thiểu - vì đồ án sử dụng Laravel 10 phải kẹp chung với bản PHP 8.1.x) ; mở terminal tại vị trí thư mục của source và chạy lần lượt 2 câu lệnh sau
+Nhóm tác giả: <i>Hoàng Tùng - Trịnh Thành - Anh Quân - Quốc Đạt</i>
 
--   Cập nhật các gói thư viện Laravel: `composer update`
--   Copy file .env.example thành 1 file khác (.env.example - Copy) và đổi tên file đã paste thành: `.env`. Sau đó, thay đổi các giá trị như tên cơ sở dữ liệu (chạy với MySQL) : dòng 14 tức giá trị `DB_DATABASE`.
--   Tạo key truy cập ứng dụng Laravel: `php artisan key:generate`
--   Khởi động XAMPP (Run as administrator/Global active) và chạy 2 dịch vụ Apache và MySQL
--   Mặc định source chạy ở `127.0.0.1:80`
--   Khởi tạo cơ sở dữ liệu: Tạo 1 db tên `elaravel` trong MySQL (có thể dùng bất kỳ cái tên nào để đặt cho CSDL, miễn tên CSDL trong MySQL trùng với config trong file .env bằng cách thay đổi giá trị `DB_DATABASE`)
--   (Không áp dụng dòng này do không đủ file migration) <del>Sau đó chạy đoạn lệnh `php artisan migrate` để chạy các file seed ra CSDL. Tài liệu Laravel migration DB: <a>https://laravel.com/docs/10.x/migrations</a></del>
--   Vào CSDL: import file SQL đã backup, file này nằm trong thư mục db_backup/elaravel.sql của repository.
+## Cách chạy môi trường test:
 
-## Learning Laravel
+Trước hết, cài đặt Composer (https://getcomposer.org/) ; XAMPP (đi chung với phiên bản PHP 8.1 tối thiểu - vì đồ án sử dụng Laravel 10 phải kẹp chung với bản PHP 8.1.x)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   Git clone source về đúng thư mục C:\xampp\htdocs\ (thư mục chứa source của XAMPP)
+-   Mở terminal tại vị trí thư mục của source (C:\xampp\htdocs\ShopBanHangLaravel) và chạy lần lượt các câu lệnh sau:
+-   Thứ nhất: Cập nhật các gói thư viện Laravel: `composer update`
+-   Quay lại, copy file .env.example và paste thành 1 file khác (.env.example - Copy) và đổi tên file đã paste thành: `.env`. Sau đó, thay đổi các giá trị ở tên cơ sở dữ liệu : dòng 14 tức sửa thành `DB_DATABASE=ecommercelaravel`. (khi đổi giống vậy thì source sẽ nhận cơ sở dữ liệu có tên là ecommercelaravel)
+-   Quay lại terminal: Tạo key truy cập ứng dụng Laravel: `php artisan key:generate`
+-   Khởi động XAMPP (Run as administrator) và chạy 2 dịch vụ Apache và MySQL
+-   Mặc định source chạy ở `127.0.0.1:80/ShopBanHangLaravel`
+-   Khởi tạo cơ sở dữ liệu: Vào MySQL (`127.0.0.1:80/PHPMyAdmin`) --> Tạo 1 CSDL tên `ecommercelaravel` trong MySQL (có thể dùng bất kỳ cái tên nào để đặt cho CSDL, miễn tên CSDL trong MySQL trùng với config trong file .env khi nãy mới thay đổi giá trị `DB_DATABASE`)
+-   Vào MySQL (`127.0.0.1:80/PHPMyAdmin`): import file elaravel.sql đã backup, file này nằm trong thư mục db_backup/elaravel.sql của source.
 
 ## Code of Conduct
 
@@ -35,3 +32,5 @@ In order to ensure that the Laravel community is welcoming to all, please review
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Nếu không là thành viên, vui lòng không sao chép đồ án cho đến khi nhóm đã thực hiện báo cáo và nộp sản phẩm!
