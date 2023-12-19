@@ -19,6 +19,7 @@ use App\Http\Controllers\DemoPaymentController;
 use App\Http\Controllers\PreReleaseProductController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\SendMailController;
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -128,3 +129,6 @@ Route::post('/comment', [CommentController::class, 'index']);
 Route::get('/mail', [SendMailController::class, 'index']);
 Route::post('/send-mail', [SendMailController::class, 'sendmail']);
 Route::post('/auto-send-mail', [SendMailController::class, 'autosendmail']);
+
+// Blog
+Route::get('/blog', [BlogController::class, 'index']);
