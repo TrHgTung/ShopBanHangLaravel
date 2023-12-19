@@ -38,7 +38,7 @@
 						<div class="chatbox-message-wrapper">
 							<div class="chatbox-message-header">
 								<div class="chatbox-message-profile">
-									<img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" alt="" class="chatbox-message-image">
+									<img src="{{asset('public/frontend/images/logo.png')}}" alt="" class="chatbox-message-image">
 									<div>
 										<h4 class="chatbox-message-name">NEKO STORE</h4>
 										<p class="chatbox-message-status">Sẽ trả lời bạn sau ít phút</p>
@@ -88,19 +88,19 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i>0909-091-223</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> tungng14@gmail.com</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><small>Kênh Youtube chính thức:</small><a href="https://www.youtube.com/channel/UCtr2lU-_OM1sBA00xEodGfA" target="_blank"><i class="fa fa-youtube"></i></a></li>
+								<!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
 							</ul>
 						</div>
 					</div>
@@ -113,7 +113,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" alt="" width="75" height="75" /></a>
+							<a href="index.html"><img src="{{asset('public/frontend/images/logo.png')}}" alt="" width="75" height="75" /></a>
 						</div>
 						
 					</div>

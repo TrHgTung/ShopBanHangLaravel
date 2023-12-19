@@ -8,7 +8,7 @@
 						<div class="chatbox-message-wrapper">
 							<div class="chatbox-message-header">
 								<div class="chatbox-message-profile">
-									<img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg" alt="" class="chatbox-message-image">
+									<img src="{{asset('public/frontend/images/logo.png')}}" alt="" class="chatbox-message-image">
 									<div>
 										<h4 class="chatbox-message-name">NEKO STORE</h4>
 										<p class="chatbox-message-status">Sẽ trả lời bạn sau ít phút</p>
