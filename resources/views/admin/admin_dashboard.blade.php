@@ -1,7 +1,7 @@
 @extends('admin_layout')
 @section('admin_content')
 
-<div class="market-updates">
+<div class="market-updates" id="contentToPrint">
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-2">
 					<div class="col-md-4 market-update-right">
@@ -56,4 +56,23 @@
 			</div>
 		   <div class="clearfix"> </div>
 		</div>
+		<div class="text-center">
+			<button class="btn btn-primary" onclick="printContent()">Xuất dữ liệu</button>
+		</div>
+		
+<script>
+function printContent() {
+  var content = document.getElementById('contentToPrint'); // Get the element to print
+  var originalContents = document.body.innerHTML; // Store original body content
+
+  // Replace the current body content with the content you want to print
+  document.body.innerHTML = content.innerHTML;
+
+  // Call the print function
+  window.print();
+
+  // Restore the original content after printing
+  document.body.innerHTML = originalContents;
+}
+</script>
 @endsection
