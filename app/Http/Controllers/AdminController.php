@@ -38,7 +38,7 @@ class AdminController extends Controller
 
     public function dashboard (Request $request)
     {
-        // echo 'bucu';
+        // echo 'test';
         $admin_email = $request->admin_email;
         $admin_password = md5($request->admin_password);
 

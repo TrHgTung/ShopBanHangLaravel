@@ -20,6 +20,7 @@ use App\Http\Controllers\PreReleaseProductController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CouponHandleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -132,3 +133,6 @@ Route::post('/auto-send-mail', [SendMailController::class, 'autosendmail']);
 
 // Blog
 Route::get('/blog', [BlogController::class, 'index']);
+
+// Coupon
+Route::post('/coupon', [CouponHandleController::class, 'index']);

@@ -94,8 +94,19 @@
 										</button>
 									</form>
 								</span>
-								<label for="">Nhập mã coupon giảm giá: </label>
-								<input type="text" name="coupon" id="coupon" size="20" maxlength="20">
+								<?php
+									$customer_id = Session::get('customer_id');
+								?>
+								<form action="{{URL::to('/coupon')}}" method="POST">
+									{{ csrf_field() }}
+									<label for="">Nhập mã coupon giảm giá: </label>
+									<input type="text" name="coupon" id="coupon" size="20" maxlength="20">
+									<input type="hidden" name="product_id" value="{{$value->product_id}}">
+									<input type="hidden" name="customer_id" value="{{$customer_id}}">
+									<button type="submit" class="btn btn-primary">Áp mã</button>
+								</form>
+								
+								
 								<p><b>Mô tả ngắn gọn:</b> {{$value->product_desc}}</p>
 								<p><b>Tình trạng:</b> Mới / Còn hàng</p>
 								<p><b>Đơn vị cung cấp</b>: {{$value->brand_name}}</p>
@@ -117,6 +128,7 @@
 						<div class="tab-content">
 							<div class="tab-pane fade" id="details" >
 								<p><strong>Về <i>{{$value->product_name}}</i></strong></p>
+								<!-- <p>{{$value->product_id}}</p> -->
                                 <p>{!!$value->product_content!!}</p>
 							</div>
 							<div class="tab-pane fade active in" id="reviews" >
@@ -142,6 +154,7 @@
 										<div class="mt-4">
 											<label for="" >Viết nội dung phản hồi (feedback) của bạn</label>
 										</div>
+										<input type="hidden" name="product_id" id="" value="{{$value->product_id}}">
 									
 										<textarea name="content" ></textarea>
 										

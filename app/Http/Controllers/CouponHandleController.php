@@ -11,15 +11,15 @@ use Illuminate\Support\Facades\Redirect;
 
 session_start();  
 
-class CommentController extends Controller
+class CouponHandleController extends Controller
 {
     public function index(Request $request){
         $data = array();
-        $data['rating'] = $request->rating;
-        $data['content'] = $request->content;
+        $data['customer_id'] = $request->customer_id;
+        $data['coupon'] = $request->coupon;
         $data['product_id'] = $request->product_id;
         
-        DB::table('tbl_comment')->insert($data);
+        DB::table('tbl_coupon')->insert($data);
 
         return Redirect::to('/');
     }

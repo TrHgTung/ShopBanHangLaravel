@@ -8,9 +8,9 @@
 						<i class="fa fa-eye"> </i>
 					</div>
 					 <div class="col-md-8 market-update-left">
-					 <h4>Visitors</h4>
+					 <h4>Số lượng khách vãng lai</h4>
 					<h3>13,500</h3>
-					<p>Other hand, we denounce</p>
+					<p>Tính đến thời điểm hiện tại</p>
 				  </div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -21,9 +21,9 @@
 						<i class="fa fa-users" ></i>
 					</div>
 					<div class="col-md-8 market-update-left">
-					<h4>Users</h4>
+					<h4>Số lượng tài khoản thành viên Neko</h4>
 						<h3>1,250</h3>
-						<p>Other hand, we denounce</p>
+						<p>Tổng số tài khoản còn hoạt động</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -34,9 +34,9 @@
 						<i class="fa fa-usd"></i>
 					</div>
 					<div class="col-md-8 market-update-left">
-						<h4>Sales</h4>
+						<h4>Tổng doanh thu mà khách đã trả</h4>
 						<h3>1,500</h3>
-						<p>Other hand, we denounce</p>
+						<p>Ở mọi phương thức thanh toán</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -47,9 +47,9 @@
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 					</div>
 					<div class="col-md-8 market-update-left">
-						<h4>Orders</h4>
+						<h4>Tổng đơn đặt hàng</h4>
 						<h3>1,500</h3>
-						<p>Other hand, we denounce</p>
+						<p>Tính đến thời điểm hiện tại</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
