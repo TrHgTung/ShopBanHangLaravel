@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Date;
+use Carbon\Carbon;
 use DB;
 use Cart;
 use App\Http\Requests;
@@ -120,6 +122,7 @@ class CheckoutController extends Controller
         $order_data['payment_id'] =  $payment_id;
         $order_data['order_total'] =  Cart::total();
         $order_data['order_status'] = 'pending';
+        $order_data['date_upd'] = Carbon::now();
 
         $order_id = DB::table('tbl_order')->insertGetId($order_data);
 

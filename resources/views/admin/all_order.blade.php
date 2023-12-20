@@ -43,26 +43,26 @@
                 <input type="checkbox"><i></i>
               </label>
             </th>
-            <th>STT</th>
+            <th>Mã đơn đặt hàng</th>
             <th>Mã khách hàng</th>
-            <th>Mã đơn vận chuyển</th>
-            <th>Mã thanh toán</th>
-            <th>Tổng thu</th>
-            <th>Trạng thái</th>
+            <th>Mã vận chuyển</th>
+            <th>Tổng giá</th>
+            <th>Ngày thực hiện</th>
+            <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
-            @foreach($all_order as $key => $all_ord)
-            <tr>
-                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                <td>{{ $all_ord->order_id }}</td>
-                <td>{{ $all_ord->customer_id }}</td>
-                <td>{{ $all_ord->shipping_id }}</td>
-                <td>{{ $all_ord->payment_id }}</td>
-                <td>{{ $all_ord->order_total }}</td>
-                <td>{{ $all_ord->order_status }}</td>
-            </tr>
-            @endforeach
+            @foreach($all_order as $key => $order)
+          <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td>{{ $order->order_id }}</td>
+            <td>{{ $order->customer_id }}</td>
+            <td>{{ $order->shipping_id }}</td>
+            <td>{{ $order->order_total }}</td>
+            <td>{{ $order->date_upd }}</td>            
+            
+          </tr>
+          @endforeach
         </tbody>
       </table>
     </div>

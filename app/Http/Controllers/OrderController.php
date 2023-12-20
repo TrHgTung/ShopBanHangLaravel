@@ -31,8 +31,9 @@ class OrderController extends Controller
     {
         $this->AuthLogin();
         $all_order = DB::table('tbl_order')->get();
-        // dd($all_order);
+        $manager_order = view('admin.all_order')->with('all_order', $all_order);
+        
+        return view('admin_layout')->with('admin.all_order', $manager_order);
 
-        return view('admin_layout')->with('admin.all_order', $all_order);
     }
 }
