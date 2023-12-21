@@ -44,17 +44,19 @@
 				</div>
 			</div>
 			<div class="col-md-3 market-update-gd">
-				<div class="market-update-block clr-block-4">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				<a href="{{URL::to('/admin/all-order')}}">
+					<div class="market-update-block clr-block-4">
+						<div class="col-md-4 market-update-right">
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+						</div>
+						<div class="col-md-8 market-update-left">
+							<h4>Tổng đơn đặt hàng</h4>
+							<h3>$orderCount</h3>
+							<p>Tính đến thời điểm hiện tại</p>
+						</div>
+					<div class="clearfix"> </div>
 					</div>
-					<div class="col-md-8 market-update-left">
-						<h4>Tổng đơn đặt hàng</h4>
-						<h3>$orderCount</h3>
-						<p>Tính đến thời điểm hiện tại</p>
-					</div>
-				  <div class="clearfix"> </div>
-				</div>
+				</a>
 			</div>
 		   <div class="clearfix"> </div>
 		</div>

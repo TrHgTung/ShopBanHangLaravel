@@ -24,7 +24,7 @@ Trước hết, cài đặt Composer (https://getcomposer.org/) ; XAMPP (đi chu
 -   Mặc định source chạy ở `127.0.0.1:80/ShopBanHangLaravel`
 -   Khởi tạo cơ sở dữ liệu: Vào MySQL (`127.0.0.1:80/PHPMyAdmin`) --> Tạo 1 CSDL tên `ecommercelaravel` trong MySQL (có thể dùng bất kỳ cái tên nào để đặt cho CSDL, miễn tên CSDL trong MySQL trùng với config trong file .env khi nãy mới thay đổi giá trị `DB_DATABASE`)
 -   Vào MySQL (`127.0.0.1:80/PHPMyAdmin`): import file "ecommercelaravel_LASTGOOD_Dec20.sql" đã backup, file này nằm trong thư mục db_backup/ecommercelaravel_LASTGOOD_Dec20.sql của source.
--   Vào cơ sở dữ liệu `ecommercelaravel` trong MySQL, truy cập vào từng bảng và thực hiện xóa toàn bộ dữ liệu rác trong từng bảng.
+-   Lưu ý: chỉ thực hiện xóa dữ liệu test với giao diện, không thao tác xóa trực tiếp trên MySQL!
 
 ## Code of Conduct
 
