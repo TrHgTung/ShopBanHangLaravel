@@ -2,18 +2,18 @@
 @section('admin_content')
 
 <div class="market-updates" id="contentToPrint">
-			<div class="col-md-3 market-update-gd">
+			<div class="col-md-3 market-update-gd">	
 				<div class="market-update-block clr-block-2">
 					<div class="col-md-4 market-update-right">
 						<i class="fa fa-eye"> </i>
 					</div>
-					 <div class="col-md-8 market-update-left">
-					 <h4>Số lượng mã giảm giá</h4>
+					<div class="col-md-8 market-update-left">
+					<h4>Số lượng mã giảm giá</h4>
 					<h3>{{$couponCount}}</h3>
-					<p>Số lượng mã đang giữ lại cho khách mua hàng</p>
-				  </div>
-				  <div class="clearfix"> </div>
+						<p>Số lượng mã đang giữ lại cho khách mua hàng</p>
 				</div>
+			<div class="clearfix"> </div>
+	</div>
 			</div>
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-1">

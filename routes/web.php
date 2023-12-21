@@ -21,6 +21,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CouponHandleController;
+// use App\Http\Controllers\CouponDisplayAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -136,3 +137,6 @@ Route::get('/blog', [BlogController::class, 'index']);
 
 // Coupon
 Route::post('/coupon', [CouponHandleController::class, 'index']);
+
+// Quan ly coupon (hien thi len admin)
+// Route::get('/admin/all-coupon', [CouponDisplayAdminController::class, 'all_coupon']); 
