@@ -42,9 +42,9 @@ class AdminController extends Controller
         $admin_email = $request->admin_email;
         $admin_password = md5($request->admin_password);
 
-        $customerCount = DB::table('tbl_customers')->count('customer_id');
-        $couponCount = DB::table('tbl_coupon')->count('coupon_id');
-        $orderCount = DB::table('tbl_order')->count('order_id');
+        $customerCount = DB::table('tbl_customers')->count();
+        $couponCount = DB::table('tbl_coupon')->count();
+        $orderCount = DB::table('tbl_order')->count();
         $totalAmount = DB::table('tbl_order')->sum('order_total');
         $result = DB::table('tbl_admin')->where('admin_email',$admin_email)->where('admin_password',$admin_password)->first();
         // echo '<pre>';
