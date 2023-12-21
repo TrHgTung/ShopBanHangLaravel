@@ -34,4 +34,4 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-Nếu không là thành viên, vui lòng không sao chép đồ án cho đến khi nhóm đã thực hiện báo cáo và nộp sản phẩm!
+Nếu không là thành viên, vui lòng không sao chép đồ án cho đến khi nhóm đã thực hiện báo cáo và nộp sản phẩm. Xin cảm ơn!

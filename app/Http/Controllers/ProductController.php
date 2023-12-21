@@ -127,6 +127,7 @@ class ProductController extends Controller
         $data['product_name'] = $request->product_name;
         $data['product_price'] = $request->product_price;
         // $data['product_image'] = $request->product_status;
+        $data['product_gift'] = $request->product_gift;
         $data['product_desc'] = $request->product_desc;
         $data['product_content'] = $request->product_content;
         $data['category_id'] = $request->product_cate;
