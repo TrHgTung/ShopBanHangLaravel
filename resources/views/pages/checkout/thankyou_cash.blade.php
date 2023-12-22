@@ -179,7 +179,11 @@
     </p>
     <form action="{{URL::to('/auto-send-mail')}}" method="post">
       {{ csrf_field() }}
-    <a href="#"><button class="btn btn-secondary">Hãy gửi e-mail thông báo cho tôi</button></a>
+      <div class="mb-4 mt-4">
+        <label for="">Nhập địa chỉ e-mail của bạn để xác nhận:</label>
+        <input type="email" name="cus_email" id=""> 
+      </div>
+      <a href="#"><button type="submit" class="btn btn-secondary">Hãy gửi e-mail thông báo cho tôi</button></a>
     </form>
   </main>
 

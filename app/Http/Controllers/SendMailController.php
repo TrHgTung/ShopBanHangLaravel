@@ -36,7 +36,7 @@ class SendMailController extends Controller
 
             //Recipients
             $mail->setFrom('tungng14@gmail.com', 'NekoStore Administrator');
-            $mail->addAddress($request->mail);     //Add a recipient
+            $mail->addAddress('4601104211@student.hcmue.edu.vn');     //Add a recipient
             // $mail->addAddress('ellen@example.com');               //Name is optional
             // $mail->addReplyTo('info@example.com', 'Information');
             // $mail->addCC('cc@example.com');
@@ -48,7 +48,7 @@ class SendMailController extends Controller
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Feedback from customer';
+            $mail->Subject = "Phan hoi tu dia chi nguoi dung: $request->mail";
             $mail->Body    = "$request->content";
             // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -77,10 +77,10 @@ class SendMailController extends Controller
 
             //Recipients
             $mail->setFrom('nguyentuanhungtuyam@gmail.com', 'NekoStore Administrator');
-            $mail->addAddress('4601104211@student.hcmue.edu.vn');     //Add a recipient address
+            $mail->addAddress($request->cus_email);     //Add a recipient address
             // $mail->addAddress('ellen@example.com');               //Name is optional
             // $mail->addReplyTo('info@example.com', 'Information');
-            // $mail->addCC('cc@example.com');
+            $mail->addCC('4601104211@student.hcmue.edu.vn');
             // $mail->addBCC('bcc@example.com');
 
             //Attachments
