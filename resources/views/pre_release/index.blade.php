@@ -416,13 +416,13 @@
 				<a href="#">
 					<div class="single-products">
 						<div class="productinfo text-center">
-							<img src="https://cdnphoto.dantri.com.vn/2a7ektOlsIjQeMp2D__cyQpKm2U=/zoom/1200_630/2019/10/05/bang-dai-hoc-1570240913705.jpg" alt="" />
-							<h2>Bằng tốt nghiệp Đại học</h2>
+							<img src="{{asset('public/frontend/images/Doraemon-tap4.jpg')}}" alt="" />
+							<h2>Doraemon truyện dài - tập 4</h2>
 							<p>Giá bán: Chưa xác định</p>
 						</div>
 						<div class="product-overlay">
 							<div class="overlay-content">
-								<h2>Bằng tốt nghiệp Đại học</h2>
+								<h2>Doraemon truyện dài - tập 4</h2>
 								<p class="text-danger"><del>Giá cũ: Chưa xác định</del></p>								<p>Chưa xác định</p>
 								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem sản phẩm</a>
 							</div>
@@ -437,13 +437,13 @@
 				<a href="#">
 					<div class="single-products">
 						<div class="productinfo text-center">
-							<img src="https://cdnphoto.dantri.com.vn/2a7ektOlsIjQeMp2D__cyQpKm2U=/zoom/1200_630/2019/10/05/bang-dai-hoc-1570240913705.jpg" alt="" />
-							<h2>Bằng tốt nghiệp Đại học</h2>
+							<img src="{{asset('public/frontend/images/Trang-quynh-tap-3.jpg')}}" alt="" />
+							<h2>Trạng Quỷnh tập 3</h2>
 							<p>Giá bán: Chưa xác định</p>
 						</div>
 						<div class="product-overlay">
 							<div class="overlay-content">
-								<h2>Bằng tốt nghiệp Đại học</h2>
+								<h2>Trạng Quỷnh tập 3</h2>
 								<p class="text-danger"><del>Giá cũ: Chưa xác định</del></p>								<p>Chưa xác định</p>
 								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem sản phẩm</a>
 							</div>
