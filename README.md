@@ -10,6 +10,7 @@
 # ĐỒ ÁN CUỐI KỲ THƯƠNG MẠI ĐIỆN TỬ - NEKO
 
 Nhóm tác giả: <i>Hoàng Tùng - Trịnh Thành - Anh Quân - Quốc Đạt</i>
+Demo: https://youtu.be/kbTeTGmChfo (không deploy được)
 
 ## Cách chạy môi trường test:
 
