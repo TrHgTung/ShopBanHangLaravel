@@ -29,14 +29,14 @@ class SendMailController extends Controller
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'tungng14@gmail.com';                     //SMTP username
-            $mail->Password   = 'sdaijnztjivizuin';                               //SMTP password
+            $mail->Username   = 'mail-của-bạn@gmail.com';                     //SMTP username
+            $mail->Password   = 'tự-tạo-app-password-mới-nhe';                               //SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom('tungng14@gmail.com', 'NekoStore Administrator');
-            $mail->addAddress('4601104211@student.hcmue.edu.vn');     //Add a recipient
+            $mail->setFrom('mail-của-bạn@gmail.com', 'NekoStore Administrator');
+            $mail->addAddress('mail-thứ-2-của-bạn@gmail.com');     //Add a recipient
             // $mail->addAddress('ellen@example.com');               //Name is optional
             // $mail->addReplyTo('info@example.com', 'Information');
             // $mail->addCC('cc@example.com');
@@ -70,17 +70,17 @@ class SendMailController extends Controller
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'nguyentuanhungtuyam@gmail.com';                     //SMTP username
-            $mail->Password   = 'gnyumicmgkuaojbv';                               //SMTP password
+            $mail->Username   = 'mail-của-bạn@gmail.com';                     //SMTP username
+            $mail->Password   = 'tự-tạo-app-password-mới-nhe';                               //SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom('nguyentuanhungtuyam@gmail.com', 'NekoStore Administrator');
+            $mail->setFrom('mail-của-bạn@gmail.com', 'NekoStore Administrator');
             $mail->addAddress($request->cus_email);     //Add a recipient address
             // $mail->addAddress('ellen@example.com');               //Name is optional
             // $mail->addReplyTo('info@example.com', 'Information');
-            $mail->addCC('4601104211@student.hcmue.edu.vn');
+            $mail->addCC('mail-thứ-2-của-bạn@gmail.com');
             // $mail->addBCC('bcc@example.com');
 
             //Attachments
