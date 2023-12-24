@@ -26,6 +26,9 @@ Trước hết, cài đặt XAMPP (https://www.apachefriends.org/download.html -
 -   Mặc định đồ án chạy ở `127.0.0.1:80/ShopBanHangLaravel`
 -   Lưu ý: chỉ thực hiện xóa dữ liệu test với giao diện (trong phần vùng admin: http://localhost/ShopBanHangLaravel/admin), không thao tác xóa dữ liệu trực tiếp trên MySQL!
 
+-    Lấy mật khẩu ứng dụng của tài khoản Google, hướng dẫn cách lấy: https://youtu.be/J4CtP1MBtOE
+-   Vào controller SendMailController.php (app/Http/Controllers/SendMailController.php): sửa các giá trị như `mail-của-bạn@gmail.com` hay `mail-thứ-2-của-bạn@gmail.com` hay `tự-tạo-app-password-mới-nhe` thành các giá trị mới như dịa chỉ Gmail của mình, một địa chỉ Gmail khác (mail thứ 2) và mật khẩu ứng dụng Google của mình. (hướng dẫn ở trên)
+
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
