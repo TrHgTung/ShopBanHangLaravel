@@ -21,10 +21,10 @@ Trước hết, cài đặt XAMPP (https://www.apachefriends.org/download.html -
 -   Mở terminal tại vị trí thư mục của source (C:\xampp\htdocs\ShopBanHangLaravel)
 -   Cập nhật các gói thư viện Laravel: gõ câu lệnh `composer update` vào terminal và enter
 -   Quay lại, copy file .env.example và paste thành 1 file khác (.env.example - Copy) và đổi tên file mới thành: `.env`. Sau đó, mở file .env và thay đổi các giá trị ở dòng 14 tức sửa thành `DB_DATABASE=ecommercelaravel`. (khi đổi giống vậy thì source sẽ nhận cơ sở dữ liệu MySQL có tên là ecommercelaravel)
--   Khởi tạo cơ sở dữ liệu: Vào MySQL (`127.0.0.1:80/PHPMyAdmin`) --> Tạo 1 CSDL tên `ecommercelaravel` trong MySQL (có thể dùng bất kỳ cái tên nào để đặt cho CSDL, miễn tên CSDL trong MySQL trùng với config trong file .env khi nãy mới thay đổi giá trị `DB_DATABASE`)
--   Vào MySQL (`127.0.0.1:80/PHPMyAdmin`): import file "ecommercelaravel_LASTGOOD_Dec20.sql" đã backup, file này nằm trong thư mục db_backup/ecommercelaravel_LASTGOOD_Dec20.sql của source.
+-   Khởi tạo cơ sở dữ liệu: Vào MySQL (`localhost/PHPMyAdmin`) --> Tạo 1 CSDL tên `ecommercelaravel` trong MySQL (có thể dùng bất kỳ cái tên nào để đặt cho CSDL, miễn tên CSDL trong MySQL trùng với config trong file .env khi nãy mới thay đổi giá trị `DB_DATABASE`)
+-   Vào MySQL (`localhost/PHPMyAdmin`): import file "ecommercelaravel_LASTGOOD_Dec20.sql" đã backup, file này nằm trong thư mục db_backup/ecommercelaravel_LASTGOOD_Dec20.sql của source.
 -   Quay lại terminal: Tạo key truy cập ứng dụng Laravel: `php artisan key:generate`
--   Mặc định đồ án chạy ở `127.0.0.1:80/ShopBanHangLaravel`
+-   Mặc định đồ án chạy ở `localhost/ShopBanHangLaravel`
 -   Lưu ý: chỉ thực hiện xóa dữ liệu test với giao diện (trong phần vùng admin: http://localhost/ShopBanHangLaravel/admin), không thao tác xóa dữ liệu trực tiếp trên MySQL!
 
 -    Lấy mật khẩu ứng dụng của tài khoản Google, hướng dẫn cách lấy: https://youtu.be/J4CtP1MBtOE
@@ -38,4 +38,4 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-Nếu không là thành viên, vui lòng không sao chép đồ án cho đến khi nhóm đã thực hiện báo cáo và nộp sản phẩm. Xin cảm ơn!
+Nhớ sửa lại thông tin tác giả, giao diện hay các thông tin khác sao cho phù hợp với hoàn cảnh của mình. Xin cảm ơn!
